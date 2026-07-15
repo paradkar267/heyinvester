@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import useScrollReveal, { useStaggerReveal } from '../hooks/useScrollReveal';
+import TrustBadges from '../components/TrustBadges';
 
 const team = [
   { name: 'Nandlal Sahu', initials: 'NS', image: '/tandekar.png', role: 'Founder & Director', bio: 'Over 15 years of real estate experience across Nagpur and Vidarbha.' },
@@ -11,6 +12,9 @@ const team = [
 export default function About() {
   const teamHeaderRef = useScrollReveal();
   const teamGridRef = useStaggerReveal();
+  const trustRef = useScrollReveal();
+  const gridRef = useScrollReveal();
+  const gridItems = useStaggerReveal('.why-card');
 
   return (
     <>
@@ -22,7 +26,7 @@ export default function About() {
 
       {/* Story & Values */}
       <section className="section">
-        <div className="container animate-in" style={{ animationDelay: '0.2s' }}>
+        <div className="container">
           <div className="grid grid--2" style={{ alignItems: 'center' }}>
             {/* Story Text */}
             <div style={{ paddingRight: 'var(--space-8)' }}>
@@ -86,6 +90,101 @@ export default function About() {
         </div>
       </section>
 
+      {/* Mission & Vision */}
+      <section className="section" style={{ background: '#FAFAFA' }}>
+        <div className="container">
+          <div className="grid grid--2" style={{ gap: 'var(--space-8)' }}>
+            {/* Mission Card */}
+            <div style={{ background: '#fff', borderRadius: '24px', padding: 'var(--space-10)', boxShadow: '0 12px 32px rgba(0,0,0,0.04)', position: 'relative', overflow: 'hidden' }}>
+              <div style={{ position: 'absolute', top: 0, right: 0, width: '150px', height: '150px', background: 'var(--green-50)', borderRadius: '0 0 0 100%', zIndex: 0, transition: 'transform 0.4s ease', opacity: 0.7 }} className="hover-scale"></div>
+              <div style={{ position: 'relative', zIndex: 1 }}>
+                <div style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '64px', height: '64px', borderRadius: '20px', background: 'var(--green-100)', color: 'var(--green-700)', marginBottom: 'var(--space-6)' }}>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                </div>
+                <h3 style={{ fontSize: 'var(--text-3xl)', fontWeight: 800, color: 'var(--green-900)', marginBottom: 'var(--space-2)', letterSpacing: '-0.02em' }}>Our Mission</h3>
+                <h4 style={{ fontSize: 'var(--text-lg)', fontWeight: 700, color: 'var(--gold-500)', marginBottom: 'var(--space-5)', fontStyle: 'italic' }}>Empowering Dreams, Building Futures</h4>
+                <p style={{ color: 'var(--gray-600)', lineHeight: 1.8, marginBottom: 'var(--space-4)', fontSize: '1.05rem' }}>
+                  At Hey Investor Pvt. Ltd., our mission is to empower individuals and families to own their dream properties in the vibrant city of Nagpur. We recognize that real estate is more than just transactions; it's about securing a future, creating wealth, and establishing a place where cherished memories are made.
+                </p>
+                <p style={{ color: 'var(--gray-600)', lineHeight: 1.8, fontSize: '1.05rem' }}>
+                  We are steadfast in our commitment to ethics, transparency, and quality, ensuring that each property we offer is a true testament to our dedication to excellence. Our goal is to provide you with not just a house, but a home where dreams are nurtured and futures are built.
+                </p>
+              </div>
+            </div>
+
+            {/* Vision Card */}
+            <div style={{ background: '#fff', borderRadius: '24px', padding: 'var(--space-10)', boxShadow: '0 12px 32px rgba(0,0,0,0.04)', position: 'relative', overflow: 'hidden' }}>
+              <div style={{ position: 'absolute', top: 0, right: 0, width: '150px', height: '150px', background: 'var(--gold-50)', borderRadius: '0 0 0 100%', zIndex: 0, transition: 'transform 0.4s ease', opacity: 0.7 }} className="hover-scale"></div>
+              <div style={{ position: 'relative', zIndex: 1 }}>
+                <div style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '64px', height: '64px', borderRadius: '20px', background: 'var(--gold-100)', color: 'var(--gold-600)', marginBottom: 'var(--space-6)' }}>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                </div>
+                <h3 style={{ fontSize: 'var(--text-3xl)', fontWeight: 800, color: 'var(--green-900)', marginBottom: 'var(--space-2)', letterSpacing: '-0.02em' }}>Our Vision</h3>
+                <h4 style={{ fontSize: 'var(--text-lg)', fontWeight: 700, color: 'var(--gold-500)', marginBottom: 'var(--space-5)', fontStyle: 'italic' }}>Redesigning Skylines, Enriching Lives</h4>
+                <p style={{ color: 'var(--gray-600)', lineHeight: 1.8, marginBottom: 'var(--space-4)', fontSize: '1.05rem' }}>
+                  At Hey Investor Pvt. Ltd., our vision is to reshape Nagpur's skyline through innovative and sustainable real estate developments. We aim to create vibrant communities that go beyond bricks and mortar, becoming hubs where lives are enriched, connections are fostered, and aspirations find a solid foundation.
+                </p>
+                <p style={{ color: 'var(--gray-600)', lineHeight: 1.8, fontSize: '1.05rem' }}>
+                  We are dedicated to offering residential and commercial plots in prime locations such as Wardha Road, Hingna, and Amravati Road. Through these developments, we strive to create spaces that reflect the dreams and ambitions of our clients, contributing to a future where every property is a step towards a better life.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Feature Grid (from Why Us) */}
+      <section className="section" style={{ background: 'linear-gradient(to bottom, var(--offwhite) 0%, transparent 15%, transparent 85%, var(--offwhite) 100%), url(/pillars.png) center/cover no-repeat', position: 'relative', paddingTop: 'var(--space-20)' }}>
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+          <div className="section-header" style={{ marginBottom: 'var(--space-12)' }}>
+            <span className="section-header__label">Our Pillars</span>
+            <h2 className="section-header__title">What Sets Us Apart</h2>
+          </div>
+          
+          <div className="grid grid--2">
+            <div className="why-card">
+              <div className="why-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h4>NMRDA &amp; RL Approved</h4>
+              <p>Every project carries a clear title and official sanction. You receive government-verified documentation at purchase — absolutely zero legal ambiguity.</p>
+            </div>
+            
+            <div className="why-card">
+              <div className="why-card__icon" style={{ background: 'var(--gold-100)', color: 'var(--gold-600)' }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="5" width="20" height="14" rx="2" ry="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+              </div>
+              <h4>90% Bank Loan Facility</h4>
+              <p>Through our partner banks, eligible buyers can access up to 90% LTV financing. We handle your entire application process end-to-end.</p>
+            </div>
+            
+            <div className="why-card">
+              <div className="why-card__icon" style={{ background: 'var(--blue-100)', color: 'var(--blue-500)' }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <h4>Prime Growth Corridors</h4>
+              <p>We focus exclusively on high-appreciation zones like Wardha Road, Hingna, and Amravati Road, ensuring your investment grows rapidly.</p>
+            </div>
+
+            <div className="why-card">
+              <div className="why-card__icon" style={{ background: 'var(--green-100)', color: 'var(--green-600)' }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+              <h4>Certified Expert Team</h4>
+              <p>Our agents are certified real estate professionals. From site selection to post-sale registration, we provide premium concierge-level support.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Trust Strip */}
+        <div className="container" style={{ marginTop: 'var(--space-24)', position: 'relative', zIndex: 2 }}>
+          <div style={{ textAlign: 'center', marginBottom: 'var(--space-10)' }}>
+            <h3 style={{ fontSize: 'var(--text-xl)', color: 'var(--green-950)' }}>Trusted by the best in the industry</h3>
+          </div>
+          <TrustBadges centered />
+        </div>
+      </section>
+
       {/* Office Expert */}
       <section className="section">
         <div className="container">
@@ -126,11 +225,11 @@ export default function About() {
       {/* Team */}
       <section className="section section--alt">
         <div className="container">
-          <div className="section-header reveal" ref={teamHeaderRef}>
+          <div className="section-header">
             <span className="section-header__label">Our Team</span>
             <h2>Meet the People Behind Hey Investor</h2>
           </div>
-          <div className="grid grid--4 stagger-wrap" ref={teamGridRef}>
+          <div className="grid grid--4">
             {team.map(({ name, initials, image, role, bio }) => (
               <div key={name} className="team-card">
                 <div className="team-card__avatar">
@@ -156,7 +255,7 @@ export default function About() {
 
       {/* CTA Section */}
       <section className="section" style={{ paddingTop: 0 }}>
-        <div className="container animate-in" style={{ animationDelay: '0.4s' }}>
+        <div className="container">
           <div className="cta-section">
             <div className="cta-section__content">
               <div className="cta-section__icon-wrapper">

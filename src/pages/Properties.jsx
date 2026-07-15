@@ -70,7 +70,7 @@ export default function Properties() {
 
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="container">
-          <div className="reveal" ref={filterRef} style={{ marginTop: '-40px', position: 'relative', zIndex: 10 }}>
+          <div className="reveal" ref={filterRef} style={{ marginTop: '32px', position: 'relative', zIndex: 10 }}>
             <FilterBar filters={filters} onChange={setFilters} />
           </div>
 

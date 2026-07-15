@@ -7,8 +7,8 @@ export default function Footer() {
         <div className="footer__grid">
           {/* Brand + Contact */}
           <div style={{ paddingRight: 'var(--space-12)' }}>
-            <div style={{ marginBottom: 'var(--space-6)', backgroundColor: 'var(--white)', display: 'inline-block', padding: 'var(--space-2) var(--space-4)', borderRadius: 'var(--radius-md)' }}>
-              <img src="/logo (1).png" alt="Hey Investor" style={{ height: '80px', objectFit: 'contain' }} />
+            <div style={{ marginBottom: 'var(--space-6)', display: 'inline-block' }}>
+              <img src="/logo (1).png" alt="Hey Investor" style={{ height: '80px', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
             </div>
             <p className="footer__text">
               Trusted partner for premium residential and commercial plots across Nagpur &amp; Vidarbha. NMRDA &amp; RL approved projects with <span className="footer__text-highlight">90% loan facility.</span>
@@ -58,14 +58,6 @@ export default function Footer() {
               <div className="footer__link-pill-left">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
                 Properties
-              </div>
-              <div className="footer__link-pill-right"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="9 18 15 12 9 6"/></svg></div>
-            </Link>
-            
-            <Link className="footer__link-pill" to="/why-hey-investor">
-              <div className="footer__link-pill-left">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                Why Hey Investor
               </div>
               <div className="footer__link-pill-right"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="9 18 15 12 9 6"/></svg></div>
             </Link>

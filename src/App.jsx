@@ -7,7 +7,6 @@ import MobileCTA from './components/MobileCTA';
 import Home from './pages/Home';
 import Properties from './pages/Properties';
 import PropertyDetail from './pages/PropertyDetail';
-import WhyHeyInvestor from './pages/WhyHeyInvestor';
 import About from './pages/About';
 import Contact from './pages/Contact';
 
@@ -47,7 +46,6 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/properties" element={<Properties />} />
           <Route path="/properties/:slug" element={<PropertyDetail />} />
-          <Route path="/why-hey-investor" element={<WhyHeyInvestor />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
