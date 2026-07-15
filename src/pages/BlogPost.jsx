@@ -150,8 +150,8 @@ export default function BlogPost() {
       </Helmet>
       
       {/* Custom Hero mimicking the screenshot */}
-      <div style={{ paddingTop: '120px', paddingBottom: '40px', background: 'var(--white)', overflow: 'hidden' }} ref={headerRef}>
-        <div className="container reveal" style={{ maxWidth: '900px', margin: '0 auto' }}>
+      <div className="reveal" style={{ paddingTop: '120px', paddingBottom: '40px', background: 'var(--white)', overflow: 'hidden' }} ref={headerRef}>
+        <div className="container" style={{ maxWidth: '900px', margin: '0 auto' }}>
           
           {/* Breadcrumbs */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '14px', color: 'var(--gray-500)', marginBottom: 'var(--space-6)', fontWeight: 500 }}>
