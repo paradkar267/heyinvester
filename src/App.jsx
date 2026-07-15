@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import MobileCTA from './components/MobileCTA';
@@ -9,6 +10,8 @@ import Properties from './pages/Properties';
 import PropertyDetail from './pages/PropertyDetail';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import ChatWidget from './components/ChatWidget';
@@ -37,21 +40,26 @@ function GlobalWidgets() {
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <Navbar />
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/properties" element={<Properties />} />
-          <Route path="/properties/:slug" element={<PropertyDetail />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </main>
-      <Footer />
-      <Toaster position="top-center" />
-      <GlobalWidgets />
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <ScrollToTop />
+        <Navbar />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/properties" element={<Properties />} />
+            <Route path="/properties/:slug" element={<PropertyDetail />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <Footer />
+        <MobileCTA />
+        <GlobalWidgets />
+        <Toaster position="bottom-center" />
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
