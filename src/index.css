@@ -1320,7 +1320,7 @@ ul, ol { list-style: none; }
 .footer {
   background: var(--green-950) url(/footer.png) center/cover no-repeat;
   color: rgba(255,255,255,0.7);
-  padding: var(--space-16) 0 0;
+  padding: var(--space-8) 0 0;
 }
 
 .footer__grid {

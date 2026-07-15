@@ -103,14 +103,29 @@ export default function Footer() {
               </div>
             </a>
 
-            <a className="footer__social-card" href="https://wa.me/919325650256" target="_blank" rel="noopener noreferrer">
+            <a className="footer__social-card" href="https://www.facebook.com/people/Hey-investors/61556059296229/" target="_blank" rel="noopener noreferrer">
               <div className="footer__social-card-left">
-                <div className="footer__social-icon footer__social-icon--whatsapp">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                <div className="footer__social-icon" style={{ color: '#1877F2', background: 'rgba(24,119,242,0.1)' }}>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                 </div>
                 <div>
-                  <div className="footer__social-title">Chat on WhatsApp</div>
-                  <div className="footer__social-subtitle">+91 93256 50256</div>
+                  <div className="footer__social-title">Connect on Facebook</div>
+                  <div className="footer__social-subtitle">Hey Investor</div>
+                </div>
+              </div>
+              <div className="footer__social-card-right">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </div>
+            </a>
+
+            <a className="footer__social-card" href="https://www.linkedin.com/company/heyinvestor/" target="_blank" rel="noopener noreferrer">
+              <div className="footer__social-card-left">
+                <div className="footer__social-icon" style={{ color: '#0A66C2', background: 'rgba(10,102,194,0.1)' }}>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </div>
+                <div>
+                  <div className="footer__social-title">Follow on LinkedIn</div>
+                  <div className="footer__social-subtitle">Hey Investor</div>
                 </div>
               </div>
               <div className="footer__social-card-right">
