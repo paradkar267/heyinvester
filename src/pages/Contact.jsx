@@ -60,7 +60,7 @@ export default function Contact() {
             </div>
             <div className="map-container reveal--right" ref={mapRef} style={{ display: 'flex', flexDirection: 'column', background: 'var(--white)', borderRadius: 'var(--radius-xl)', overflow: 'hidden', border: '1px solid var(--gray-100)', boxShadow: 'var(--shadow-sm)' }}>
               <iframe
-                src="https://maps.google.com/maps?q=103,+Ghatate+Building,+WHC+Road,+Nr.+Law+College+Sq.,+Nagpur+Maharashtra,+India&t=&z=16&ie=UTF8&iwloc=B&output=embed"
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=103,%20Ghatate%20Building,%20W%20High%20Ct%20Rd,%20near%20Law%20College%20Square,%20Dharampeth,%20Nagpur,%20Maharashtra%20440010+(Hey%20Investor%20Pvt.%20Ltd.)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                 title="Hey Investor Office — Nagpur"
                 allowFullScreen=""
                 loading="lazy"
