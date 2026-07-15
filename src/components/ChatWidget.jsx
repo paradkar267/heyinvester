@@ -24,6 +24,8 @@ export default function ChatWidget() {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
+  const panelRef = useRef(null);
+  const toggleRef = useRef(null);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -36,6 +38,18 @@ export default function ChatWidget() {
   useEffect(() => {
     localStorage.setItem('heyInvestorChatHistory', JSON.stringify(messages));
   }, [messages]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isOpen && panelRef.current && !panelRef.current.contains(event.target) && toggleRef.current && !toggleRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
 
   const clearHistory = () => {
     if (window.confirm('Are you sure you want to clear your chat history?')) {
@@ -114,6 +128,7 @@ export default function ChatWidget() {
     <>
       {/* Floating Button */}
       <button 
+        ref={toggleRef}
         className={`chat-widget-toggle ${!isOpen ? 'pulse-anim' : ''}`}
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle AI Chat"
@@ -122,7 +137,7 @@ export default function ChatWidget() {
       </button>
 
       {/* Chat Panel */}
-      <div className={`chat-widget-panel ${isOpen ? 'is-open' : ''}`}>
+      <div ref={panelRef} className={`chat-widget-panel ${isOpen ? 'is-open' : ''}`}>
         <div className="chat-widget-header">
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
             <div className="chat-header-avatar">

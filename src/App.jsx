@@ -31,7 +31,6 @@ function GlobalWidgets() {
     <>
       <FloatingWhatsApp />
       <ChatWidget />
-      <MobileCTA />
     </>
   );
 }

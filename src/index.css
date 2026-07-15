@@ -1569,10 +1569,6 @@ ul, ol { list-style: none; }
   color: var(--gold-600);
 }
 
-@media (max-width: 768px) {
-  .mobile-cta { display: block; }
-  body { padding-bottom: 80px; }
-}
 
 /* ═══════════════════════════════════════════
    CONTACT HERO & INFO CARDS
@@ -2193,7 +2189,7 @@ ul, ol { list-style: none; }
 
 @media (max-width: 768px) {
   .floating-whatsapp {
-    bottom: 80px; /* Push above Mobile CTA */
+    bottom: 24px;
     right: 16px;
     width: 50px;
     height: 50px;
@@ -2453,20 +2449,20 @@ ul, ol { list-style: none; }
 
 @media (max-width: 768px) {
   .chat-widget-toggle {
-    bottom: 140px; /* Above Mobile CTA and Whatsapp */
+    bottom: 84px;
     right: 16px;
     width: 50px;
     height: 50px;
   }
   
   .chat-widget-panel {
-    bottom: 0;
-    right: 0;
-    width: 100vw;
-    height: 100vh;
-    height: 100dvh;
-    max-height: none;
-    border-radius: 0;
+    bottom: 90px;
+    right: 16px;
+    width: calc(100vw - 32px);
+    max-width: 380px;
+    height: 65vh;
+    max-height: 550px;
+    border-radius: var(--radius-xl);
     z-index: 999999;
   }
 }
@@ -2527,4 +2523,18 @@ ul, ol { list-style: none; }
 }
 .chat-message-wrapper.assistant > div {
   max-width: 90% !important;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background-position: center bottom !important;
+  }
+  .contact-hero {
+    padding: 80px 0 100px !important;
+    background-position: center bottom !important;
+  }
+  .page-header--properties {
+    padding: calc(var(--space-12) + var(--nav-height)) 0 calc(var(--space-12)) !important;
+    background-position: center bottom !important;
+  }
 }

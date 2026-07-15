@@ -22,7 +22,7 @@ export default function Properties() {
       {/* ── Full-Width Properties Banner ────────────────────────────── */}
       <div style={{ 
         width: '100%', 
-        height: 'clamp(300px, 40vh, 450px)', 
+        height: 'clamp(140px, 25vh, 450px)', 
         marginTop: 'var(--nav-height)',
         position: 'relative',
         display: 'flex',
