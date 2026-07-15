@@ -90,6 +90,43 @@ export default function About() {
         </div>
       </section>
 
+      {/* Office Expert */}
+      <section className="section">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-header__label">Expert Guidance</span>
+            <h2>Our Office Expert</h2>
+            <p className="section-header__desc" style={{ maxWidth: '800px', margin: '0 auto var(--space-10)' }}>
+              At Hey Investor Pvt. Ltd., we believe that expert guidance is key to making informed and confident real estate decisions. Meet our dedicated office expert, a seasoned professional with a wealth of knowledge and a passion for helping clients navigate the complexities of the real estate market.
+            </p>
+          </div>
+
+          <div className="grid grid--2" style={{ marginBottom: 'var(--space-12)', textAlign: 'left', gap: 'var(--space-6)' }}>
+            <div style={{ background: '#fff', padding: 'var(--space-6)', borderRadius: 'var(--radius-lg)', boxShadow: '0 4px 12px rgba(15,91,63,0.05)', border: '1px solid var(--gray-100)' }}>
+              <h4 style={{ color: 'var(--green-900)', marginBottom: 'var(--space-2)' }}>In-Depth Knowledge</h4>
+              <p style={{ fontSize: 'var(--text-sm)', color: 'var(--gray-600)', margin: 0 }}>With extensive experience in the real estate industry, our expert is well-versed in market trends, property values, and the nuances of property transactions.</p>
+            </div>
+            <div style={{ background: '#fff', padding: 'var(--space-6)', borderRadius: 'var(--radius-lg)', boxShadow: '0 4px 12px rgba(15,91,63,0.05)', border: '1px solid var(--gray-100)' }}>
+              <h4 style={{ color: 'var(--green-900)', marginBottom: 'var(--space-2)' }}>Personalized Assistance</h4>
+              <p style={{ fontSize: 'var(--text-sm)', color: 'var(--gray-600)', margin: 0 }}>Whether you're buying your first home, investing in commercial property, or seeking the perfect plot, our office expert provides tailored advice to meet your unique needs.</p>
+            </div>
+            <div style={{ background: '#fff', padding: 'var(--space-6)', borderRadius: 'var(--radius-lg)', boxShadow: '0 4px 12px rgba(15,91,63,0.05)', border: '1px solid var(--gray-100)' }}>
+              <h4 style={{ color: 'var(--green-900)', marginBottom: 'var(--space-2)' }}>Seamless Process</h4>
+              <p style={{ fontSize: 'var(--text-sm)', color: 'var(--gray-600)', margin: 0 }}>From initial consultation to finalizing the deal, our expert ensures a smooth and hassle-free experience, handling all the details with precision and care.</p>
+            </div>
+            <div style={{ background: '#fff', padding: 'var(--space-6)', borderRadius: 'var(--radius-lg)', boxShadow: '0 4px 12px rgba(15,91,63,0.05)', border: '1px solid var(--gray-100)' }}>
+              <h4 style={{ color: 'var(--green-900)', marginBottom: 'var(--space-2)' }}>Trust and Reliability</h4>
+              <p style={{ fontSize: 'var(--text-sm)', color: 'var(--gray-600)', margin: 0 }}>Our office expert embodies the core values of Hey Investor Pvt. Ltd. – integrity, transparency, and commitment to excellence.</p>
+            </div>
+          </div>
+
+          <div style={{ textAlign: 'center' }}>
+            <h3 style={{ fontSize: 'var(--text-2xl)', color: 'var(--green-900)', marginBottom: 'var(--space-3)' }}>Ready to make your real estate dreams a reality?</h3>
+            <p style={{ color: 'var(--gray-600)', maxWidth: '600px', margin: '0 auto' }}>Reach out to our office expert today and embark on a journey towards securing your ideal property with confidence and ease.</p>
+          </div>
+        </div>
+      </section>
+
       {/* Mission & Vision */}
       <section className="section" style={{ background: '#FAFAFA' }}>
         <div className="container">
@@ -185,42 +222,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Office Expert */}
-      <section className="section">
-        <div className="container">
-          <div className="section-header">
-            <span className="section-header__label">Expert Guidance</span>
-            <h2>Our Office Expert</h2>
-            <p className="section-header__desc" style={{ maxWidth: '800px', margin: '0 auto var(--space-10)' }}>
-              At Hey Investor Pvt. Ltd., we believe that expert guidance is key to making informed and confident real estate decisions. Meet our dedicated office expert, a seasoned professional with a wealth of knowledge and a passion for helping clients navigate the complexities of the real estate market.
-            </p>
-          </div>
 
-          <div className="grid grid--2" style={{ marginBottom: 'var(--space-12)', textAlign: 'left', gap: 'var(--space-6)' }}>
-            <div style={{ background: '#fff', padding: 'var(--space-6)', borderRadius: 'var(--radius-lg)', boxShadow: '0 4px 12px rgba(15,91,63,0.05)', border: '1px solid var(--gray-100)' }}>
-              <h4 style={{ color: 'var(--green-900)', marginBottom: 'var(--space-2)' }}>In-Depth Knowledge</h4>
-              <p style={{ fontSize: 'var(--text-sm)', color: 'var(--gray-600)', margin: 0 }}>With extensive experience in the real estate industry, our expert is well-versed in market trends, property values, and the nuances of property transactions.</p>
-            </div>
-            <div style={{ background: '#fff', padding: 'var(--space-6)', borderRadius: 'var(--radius-lg)', boxShadow: '0 4px 12px rgba(15,91,63,0.05)', border: '1px solid var(--gray-100)' }}>
-              <h4 style={{ color: 'var(--green-900)', marginBottom: 'var(--space-2)' }}>Personalized Assistance</h4>
-              <p style={{ fontSize: 'var(--text-sm)', color: 'var(--gray-600)', margin: 0 }}>Whether you're buying your first home, investing in commercial property, or seeking the perfect plot, our office expert provides tailored advice to meet your unique needs.</p>
-            </div>
-            <div style={{ background: '#fff', padding: 'var(--space-6)', borderRadius: 'var(--radius-lg)', boxShadow: '0 4px 12px rgba(15,91,63,0.05)', border: '1px solid var(--gray-100)' }}>
-              <h4 style={{ color: 'var(--green-900)', marginBottom: 'var(--space-2)' }}>Seamless Process</h4>
-              <p style={{ fontSize: 'var(--text-sm)', color: 'var(--gray-600)', margin: 0 }}>From initial consultation to finalizing the deal, our expert ensures a smooth and hassle-free experience, handling all the details with precision and care.</p>
-            </div>
-            <div style={{ background: '#fff', padding: 'var(--space-6)', borderRadius: 'var(--radius-lg)', boxShadow: '0 4px 12px rgba(15,91,63,0.05)', border: '1px solid var(--gray-100)' }}>
-              <h4 style={{ color: 'var(--green-900)', marginBottom: 'var(--space-2)' }}>Trust and Reliability</h4>
-              <p style={{ fontSize: 'var(--text-sm)', color: 'var(--gray-600)', margin: 0 }}>Our office expert embodies the core values of Hey Investor Pvt. Ltd. – integrity, transparency, and commitment to excellence.</p>
-            </div>
-          </div>
-
-          <div style={{ textAlign: 'center' }}>
-            <h3 style={{ fontSize: 'var(--text-2xl)', color: 'var(--green-900)', marginBottom: 'var(--space-3)' }}>Ready to make your real estate dreams a reality?</h3>
-            <p style={{ color: 'var(--gray-600)', maxWidth: '600px', margin: '0 auto' }}>Reach out to our office expert today and embark on a journey towards securing your ideal property with confidence and ease.</p>
-          </div>
-        </div>
-      </section>
 
       {/* Team */}
       <section className="section section--alt">
