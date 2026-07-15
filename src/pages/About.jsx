@@ -127,6 +127,37 @@ export default function About() {
         </div>
       </section>
 
+      {/* Team */}
+      <section className="section section--alt">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-header__label">Our Team</span>
+            <h2>Meet the People Behind Hey Investor</h2>
+          </div>
+          <div className="grid grid--4">
+            {team.map(({ name, initials, image, role, bio }) => (
+              <div key={name} className="team-card">
+                <div className="team-card__avatar">
+                  {image ? <img src={image} alt={name} /> : initials}
+                </div>
+                <h4 className="team-card__name">{name}</h4>
+                <div className="team-card__role">{role}</div>
+                <p className="team-card__bio">{bio}</p>
+                <div className="team-card__actions">
+                  <a href="tel:+919325650256" className="btn btn--ghost" style={{ fontSize: 'var(--text-xs)', padding: 'var(--space-2) var(--space-3)' }}>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" /></svg>
+                    Call
+                  </a>
+                  <a href="https://wa.me/919325650256" className="btn btn--whatsapp" style={{ fontSize: 'var(--text-xs)', padding: 'var(--space-2) var(--space-3)' }} target="_blank" rel="noopener noreferrer">
+                    WhatsApp
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Mission & Vision */}
       <section className="section" style={{ background: '#FAFAFA' }}>
         <div className="container">
@@ -224,36 +255,7 @@ export default function About() {
 
 
 
-      {/* Team */}
-      <section className="section section--alt">
-        <div className="container">
-          <div className="section-header">
-            <span className="section-header__label">Our Team</span>
-            <h2>Meet the People Behind Hey Investor</h2>
-          </div>
-          <div className="grid grid--4">
-            {team.map(({ name, initials, image, role, bio }) => (
-              <div key={name} className="team-card">
-                <div className="team-card__avatar">
-                  {image ? <img src={image} alt={name} /> : initials}
-                </div>
-                <h4 className="team-card__name">{name}</h4>
-                <div className="team-card__role">{role}</div>
-                <p className="team-card__bio">{bio}</p>
-                <div className="team-card__actions">
-                  <a href="tel:+919325650256" className="btn btn--ghost" style={{ fontSize: 'var(--text-xs)', padding: 'var(--space-2) var(--space-3)' }}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" /></svg>
-                    Call
-                  </a>
-                  <a href="https://wa.me/919325650256" className="btn btn--whatsapp" style={{ fontSize: 'var(--text-xs)', padding: 'var(--space-2) var(--space-3)' }} target="_blank" rel="noopener noreferrer">
-                    WhatsApp
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* CTA Section */}
       <section className="section" style={{ paddingTop: 0 }}>
