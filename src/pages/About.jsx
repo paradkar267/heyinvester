@@ -143,13 +143,18 @@ export default function About() {
                 <h4 className="team-card__name">{name}</h4>
                 <div className="team-card__role">{role}</div>
                 <p className="team-card__bio">{bio}</p>
-                <div className="team-card__actions">
-                  <a href="tel:+919325650256" className="btn btn--ghost" style={{ fontSize: 'var(--text-xs)', padding: 'var(--space-2) var(--space-3)' }}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" /></svg>
-                    Call
+                <div className="team-card__actions" style={{ display: 'flex', gap: '8px', justifyContent: 'center' }}>
+                  <a href="tel:+919325650256" style={{ width: '36px', height: '36px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--gray-200)', color: 'var(--green-700)', transition: 'all 0.2s', textDecoration: 'none', background: 'var(--white)' }}>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" /></svg>
                   </a>
-                  <a href="https://wa.me/919325650256" className="btn btn--whatsapp" style={{ fontSize: 'var(--text-xs)', padding: 'var(--space-2) var(--space-3)' }} target="_blank" rel="noopener noreferrer">
-                    WhatsApp
+                  <a href="https://wa.me/919325650256" style={{ width: '36px', height: '36px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--gray-200)', color: '#25D366', transition: 'all 0.2s', textDecoration: 'none', background: 'var(--white)' }} target="_blank" rel="noopener noreferrer">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                  </a>
+                  <a href="https://www.instagram.com/heyinvestor_official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" style={{ width: '36px', height: '36px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--gray-200)', color: '#E1306C', transition: 'all 0.2s', textDecoration: 'none', background: 'var(--white)' }} target="_blank" rel="noopener noreferrer">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                  </a>
+                  <a href="https://www.linkedin.com/company/hey-investor-pvt-ltd-official/" style={{ width: '36px', height: '36px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--gray-200)', color: '#0A66C2', transition: 'all 0.2s', textDecoration: 'none', background: 'var(--white)' }} target="_blank" rel="noopener noreferrer">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
                   </a>
                 </div>
               </div>
