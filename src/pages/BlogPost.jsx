@@ -70,7 +70,7 @@ function CustomContentRenderer({ content }) {
 
         if (remainingText) {
           const renderTextWithBold = () => {
-              const parts = remainingText.split(/(\\**.*?\\**)/g);
+              const parts = remainingText.split(/(\*\*.*?\*\*)/g);
               return parts.map((part, i) => {
                   if (part.startsWith('**') && part.endsWith('**')) {
                       return <strong key={i} style={{ color: 'var(--gray-900)' }}>{part.slice(2, -2)}</strong>;
