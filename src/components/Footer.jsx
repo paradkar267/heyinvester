@@ -106,7 +106,12 @@ export default function Footer() {
           <div className="footer__bottom-shield">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
           </div>
-          © {new Date().getFullYear()} Hey Investor Pvt. Ltd. All rights reserved.
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px' }}>
+            <span>© {new Date().getFullYear()} Hey Investor Pvt. Ltd. All rights reserved.</span>
+            <span style={{ fontSize: '13px', color: 'var(--gray-400)' }}>
+              Developed by <a href="https://bizleap.in/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gold-400)', textDecoration: 'none', fontWeight: 500 }}>BizLeap</a>
+            </span>
+          </div>
         </div>
       </div>
     </footer>
