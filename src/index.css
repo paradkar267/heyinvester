@@ -484,7 +484,7 @@ ul, ol { list-style: none; }
 }
 
 @media (max-width: 640px) {
-  .hero { padding: var(--space-16) 0 var(--space-12); }
+  .hero { padding: calc(var(--space-16) + var(--nav-height)) 0 var(--space-12); }
   .hero__title { font-size: var(--text-3xl); }
   .hero__ctas { flex-direction: column; }
   .hero__ctas .btn { width: 100%; }
@@ -2530,8 +2530,11 @@ ul, ol { list-style: none; }
     background-position: center bottom !important;
   }
   .contact-hero {
-    padding: 80px 0 100px !important;
+    padding: calc(var(--space-12) + var(--nav-height)) 0 calc(var(--space-8)) !important;
     background-position: center bottom !important;
+  }
+  .contact-info-cards {
+    margin-top: -30px;
   }
   .page-header--properties {
     padding: calc(var(--space-12) + var(--nav-height)) 0 calc(var(--space-12)) !important;
