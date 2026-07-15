@@ -57,8 +57,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Perfect Property Video Section (Redesigned) ─────────────────────── */}
-      <section className="section" style={{ paddingTop: 'var(--space-12)', paddingBottom: 'var(--space-8)' }}>
+      {/* ── Perfect Property Video Section (Redesigned) ───────────────────────────────── */}
+      <section className="section" style={{ paddingTop: 'var(--space-12)', paddingBottom: 'var(--space-24)' }}>
         <div className="container">
           <div className="grid grid--2" ref={videoRef} style={{ alignItems: 'center', gap: 'var(--space-16)' }}>
             {/* Left: Video & Decorations */}
@@ -165,48 +165,7 @@ export default function Home() {
             </div>
           </div>
           
-          {/* Bottom Features Strip */}
-          <div style={{ animationDelay: '0.4s', marginTop: 'var(--space-12)', background: '#fff', borderRadius: '24px', padding: '24px', boxShadow: '0 10px 40px rgba(0,0,0,0.04)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '16px', padding: '0 8px' }}>
-              <div style={{ color: 'var(--green-800)', background: 'rgba(15,91,63,0.08)', width: '48px', height: '48px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-              </div>
-              <div>
-                <strong style={{ color: 'var(--green-900)', display: 'block', fontSize: '13px', marginBottom: '2px' }}>Wide Range of<br/>Properties</strong>
-                <span style={{ color: '#777', fontSize: '11px', lineHeight: 1.3, display: 'block' }}>Residential & Commercial<br/>options for every need</span>
-              </div>
-            </div>
 
-            <div style={{ display: 'flex', alignItems: 'center', gap: '16px', padding: '0 8px', borderLeft: '1px solid rgba(0,0,0,0.05)' }}>
-              <div style={{ color: 'var(--green-800)', background: 'rgba(15,91,63,0.08)', width: '48px', height: '48px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </div>
-              <div>
-                <strong style={{ color: 'var(--green-900)', display: 'block', fontSize: '13px', marginBottom: '2px' }}>Prime Locations</strong>
-                <span style={{ color: '#777', fontSize: '11px', lineHeight: 1.3, display: 'block' }}>Properties in high-growth<br/>areas with great connectivity</span>
-              </div>
-            </div>
-
-            <div style={{ display: 'flex', alignItems: 'center', gap: '16px', padding: '0 8px', borderLeft: '1px solid rgba(0,0,0,0.05)' }}>
-              <div style={{ color: 'var(--green-800)', background: 'rgba(15,91,63,0.08)', width: '48px', height: '48px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3-6 6"/><path d="M8.4 21.6A5.8 5.8 0 0 1 1.5 15l2.77-2.77a6 6 0 0 1 8.49 0l.94.94"/><path d="M17 11l-3 3"/><path d="M12.5 15.5l-3 3"/></svg>
-              </div>
-              <div>
-                <strong style={{ color: 'var(--green-900)', display: 'block', fontSize: '13px', marginBottom: '2px' }}>Transparent Deals</strong>
-                <span style={{ color: '#777', fontSize: '11px', lineHeight: 1.3, display: 'block' }}>Honest guidance and clear<br/>process every step of the way</span>
-              </div>
-            </div>
-
-            <div style={{ display: 'flex', alignItems: 'center', gap: '16px', padding: '0 8px', borderLeft: '1px solid rgba(0,0,0,0.05)' }}>
-              <div style={{ color: 'var(--green-800)', background: 'rgba(15,91,63,0.08)', width: '48px', height: '48px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3v4z"/><path d="M3 19a2 2 0 0 0 2 2h1v-6H3v4z"/></svg>
-              </div>
-              <div>
-                <strong style={{ color: 'var(--green-900)', display: 'block', fontSize: '13px', marginBottom: '2px' }}>End-to-End Support</strong>
-                <span style={{ color: '#777', fontSize: '11px', lineHeight: 1.3, display: 'block' }}>From search to possession,<br/>we're with you always</span>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
