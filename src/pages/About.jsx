@@ -91,7 +91,7 @@ export default function About() {
       </section>
 
       {/* Office Expert */}
-      <section className="section">
+      <section className="section" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="section-header">
             <span className="section-header__label">Expert Guidance</span>
