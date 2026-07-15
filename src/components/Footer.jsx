@@ -88,50 +88,17 @@ export default function Footer() {
               Connect With Us
             </h4>
             
-            <a className="footer__social-card" href="https://www.instagram.com/heyinvestor_official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
-              <div className="footer__social-card-left">
-                <div className="footer__social-icon footer__social-icon--instagram">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-                </div>
-                <div>
-                  <div className="footer__social-title">Follow us on Instagram</div>
-                  <div className="footer__social-subtitle">@heyinvestor_official</div>
-                </div>
-              </div>
-              <div className="footer__social-card-right">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-              </div>
-            </a>
-
-            <a className="footer__social-card" href="https://www.facebook.com/people/Hey-investors/61556059296229/" target="_blank" rel="noopener noreferrer">
-              <div className="footer__social-card-left">
-                <div className="footer__social-icon" style={{ color: '#ffffff', background: '#1877F2', border: 'none' }}>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-                </div>
-                <div>
-                  <div className="footer__social-title">Connect on Facebook</div>
-                  <div className="footer__social-subtitle">Hey Investor</div>
-                </div>
-              </div>
-              <div className="footer__social-card-right">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-              </div>
-            </a>
-
-            <a className="footer__social-card" href="https://www.linkedin.com/company/heyinvestor/" target="_blank" rel="noopener noreferrer">
-              <div className="footer__social-card-left">
-                <div className="footer__social-icon" style={{ color: '#ffffff', background: '#0A66C2', border: 'none' }}>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                </div>
-                <div>
-                  <div className="footer__social-title">Follow on LinkedIn</div>
-                  <div className="footer__social-subtitle">Hey Investor</div>
-                </div>
-              </div>
-              <div className="footer__social-card-right">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-              </div>
-            </a>
+            <div style={{ display: 'flex', gap: '16px', marginTop: 'var(--space-4)' }}>
+              <a href="https://www.instagram.com/heyinvestor_official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="footer__social-icon footer__social-icon--instagram" style={{ width: '48px', height: '48px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'transform 0.2s', textDecoration: 'none' }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="https://www.facebook.com/people/Hey-investors/61556059296229/" target="_blank" rel="noopener noreferrer" className="footer__social-icon" style={{ width: '48px', height: '48px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff', background: '#1877F2', transition: 'transform 0.2s', textDecoration: 'none' }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/company/heyinvestor/" target="_blank" rel="noopener noreferrer" className="footer__social-icon" style={{ width: '48px', height: '48px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff', background: '#0A66C2', transition: 'transform 0.2s', textDecoration: 'none' }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+            </div>
           </div>
         </div>
 
