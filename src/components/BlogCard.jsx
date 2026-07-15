@@ -12,40 +12,38 @@ export default function BlogCard({ post }) {
   });
 
   return (
-    <Link to={`/blog/${slug}`} className="property-card" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', flexDirection: 'column' }}>
-      <div className="property-card__image-wrapper">
-        <img 
-          src={coverImage} 
-          alt={title} 
-          className="property-card__image" 
-          loading="lazy"
-        />
+    <Link to={`/blog/${slug}`} style={{ textDecoration: 'none', color: 'inherit', display: 'flex', flexDirection: 'column' }}>
+      <div style={{ position: 'relative', marginBottom: 'var(--space-3)' }}>
+        <div style={{ aspectRatio: '1.2/1', overflow: 'hidden', borderRadius: '12px' }}>
+          <img 
+            src={coverImage} 
+            alt={title} 
+            style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.4s ease' }}
+            loading="lazy"
+            onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'}
+            onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'}
+          />
+        </div>
         <div style={{ position: 'absolute', top: 'var(--space-3)', right: 'var(--space-3)', display: 'flex', gap: '8px', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
           {tags.slice(0, 2).map(tag => (
-            <span key={tag} style={{ background: 'var(--white)', color: 'var(--green-800)', padding: '4px 10px', borderRadius: '4px', fontSize: '12px', fontWeight: 600, boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
+            <span key={tag} style={{ background: 'var(--white)', color: 'var(--green-800)', padding: '4px 12px', borderRadius: '4px', fontSize: '11px', fontWeight: 600, boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
               {tag}
             </span>
           ))}
         </div>
       </div>
 
-      <div className="property-card__content" style={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
-        <div style={{ fontSize: '13px', color: 'var(--gray-500)', marginBottom: 'var(--space-2)' }}>
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <div style={{ fontSize: '12px', color: '#666', marginBottom: '6px' }}>
           {formattedDate}
         </div>
-        <h3 className="property-card__title" style={{ marginBottom: 'var(--space-3)', fontSize: '1.25rem' }}>{title}</h3>
+        <h3 style={{ fontFamily: 'var(--font-heading)', color: 'var(--green-950)', fontSize: '1.15rem', fontWeight: 700, lineHeight: 1.4, marginBottom: '8px' }}>
+          {title}
+        </h3>
         
-        <p style={{ color: 'var(--gray-600)', fontSize: '14px', lineHeight: 1.6, marginBottom: 'var(--space-4)', flexGrow: 1 }}>
+        <p style={{ color: 'var(--gray-600)', fontSize: '13px', lineHeight: 1.6, margin: 0, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
           {excerpt}
         </p>
-
-        <div style={{ display: 'flex', alignItems: 'center', color: 'var(--gold-500)', fontWeight: 600, fontSize: '14px', marginTop: 'auto' }}>
-          Read Article
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginLeft: '4px' }}>
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </div>
       </div>
     </Link>
   );

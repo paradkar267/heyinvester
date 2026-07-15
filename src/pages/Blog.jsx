@@ -65,7 +65,7 @@ export default function Blog() {
         {/* Centered Text */}
         <div style={{ position: 'relative', zIndex: 3, textAlign: 'center', padding: '0 var(--space-4)' }}>
           <h1 style={{ 
-            fontFamily: 'Georgia, "Times New Roman", serif',
+            fontFamily: 'var(--font-heading)',
             fontSize: 'var(--text-4xl)', 
             color: 'var(--green-950)', 
             margin: 0,
