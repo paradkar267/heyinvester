@@ -1,8 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import blogPosts from '../data/blogPosts';
-import BlogCard from '../components/BlogCard';
-import useScrollReveal, { useStaggerReveal } from '../hooks/useScrollReveal';
+import useScrollReveal from '../hooks/useScrollReveal';
 import React from 'react';
 
 // Custom component to render the parsed markdown-like content
@@ -123,7 +122,6 @@ export default function BlogPost() {
   const headerRef = useScrollReveal();
   const contentRef = useScrollReveal({ rootMargin: '0px 0px -20px 0px' });
   const ctaRef = useScrollReveal({ rootMargin: '0px 0px -20px 0px' });
-  const relatedRef = useStaggerReveal({ rootMargin: '0px 0px -20px 0px' });
 
   if (!post) {
     return (
@@ -153,10 +151,6 @@ export default function BlogPost() {
     day: 'numeric',
     year: 'numeric'
   });
-
-  const relatedPosts = blogPosts
-    .filter(p => p.slug !== slug && p.tags.some(t => tags.includes(t)))
-    .slice(0, 3);
 
   // Estimate read time
   const wordCount = content.split(/\s+/).length;
@@ -241,18 +235,6 @@ export default function BlogPost() {
           </div>
         </div>
       </section>
-
-      {/* Related Posts */}
-      {relatedPosts.length > 0 && (
-        <section className="section" style={{ background: 'var(--gray-50)', borderTop: '1px solid var(--gray-200)' }}>
-          <div className="container">
-            <h2 className="section__title" style={{ textAlign: 'center', marginBottom: 'var(--space-8)' }}>Related Posts</h2>
-            <div className="grid grid--3 stagger-wrap" ref={relatedRef}>
-              {relatedPosts.map(p => <BlogCard key={p.slug} post={p} />)}
-            </div>
-          </div>
-        </section>
-      )}
     </>
   );
 }
