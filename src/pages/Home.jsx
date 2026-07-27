@@ -265,7 +265,7 @@ export default function Home() {
               </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--space-6)', justifyContent: 'center', position: 'relative', zIndex: 1 }}>
                 {comingSoonProjects.map(p => (
-                  <div key={p.slug} style={{ flex: '0 1 380px', width: '100%' }}>
+                  <div key={p.slug} style={{ flex: '1 1 min(100%, 380px)', maxWidth: '100%' }}>
                     <PropertyCard property={p} />
                   </div>
                 ))}
