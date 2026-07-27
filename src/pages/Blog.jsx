@@ -29,51 +29,9 @@ export default function Blog() {
   return (
     <>
       {/* ── Full-Width Blog Banner ────────────────────────────── */}
-      <div style={{ 
-        width: '100%', 
-        height: 'clamp(140px, 25vh, 450px)', 
-        marginTop: 'var(--nav-height)',
-        position: 'relative',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
-      }}>
-        {/* Background Image */}
-        <img 
-          src={bgImage} 
-          alt="Blog Banner" 
-          style={{ 
-            position: 'absolute',
-            top: 0, left: 0,
-            width: '100%', 
-            height: '100%', 
-            objectFit: 'cover', 
-            objectPosition: 'center',
-            display: 'block',
-            zIndex: 1
-          }} 
-        />
-        
-        {/* Subtle Light Glow for Text Readability */}
-        <div style={{
-          position: 'absolute',
-          inset: 0,
-          background: 'radial-gradient(ellipse at center, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 50%)',
-          zIndex: 2
-        }}></div>
-
-        {/* Centered Text */}
-        <div style={{ position: 'relative', zIndex: 3, textAlign: 'center', padding: '0 var(--space-4)' }}>
-          <h1 style={{ 
-            fontFamily: 'var(--font-heading)',
-            fontSize: 'var(--text-4xl)', 
-            color: 'var(--green-950)', 
-            margin: 0,
-            letterSpacing: '0.02em',
-            fontWeight: '700'
-          }}>
-            Our Blog
-          </h1>
+      <div className="page-header page-header--properties animate-in" style={{ backgroundImage: 'url(/properties.png)' }}>
+        <div className="container">
+          <h1 className="page-header__title" style={{ fontSize: 'var(--text-4xl)' }}>Our Blog</h1>
         </div>
       </div>
 
