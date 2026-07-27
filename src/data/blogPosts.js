@@ -3,6 +3,34 @@
 
 const blogPosts = [
   {
+    slug: 'best-time-invest-nagpur-marina',
+    title: 'The Best Time to Invest in Nagpur is Now',
+    excerpt: 'With ₹5 Lakh Cr+ in infrastructure development, South Nagpur offers 5.2X growth potential for early investors in premium projects like Nagpur Marina.',
+    coverImage: '/BLOGS/infiniteblog.png',
+    author: 'Hey Investor Team',
+    publishedAt: '2026-07-27',
+    tags: ['Investment', 'Market Trends'],
+    content: `
+The real estate market in Nagpur is experiencing a golden era, and the numbers speak for themselves. With massive infrastructure developments and a rapidly growing economy, there has never been a better time to secure your piece of the pie.
+
+### Unprecedented Growth Potential
+Nagpur is currently witnessing a massive **₹5 Lakh Crore+** infusion into infrastructure projects. This immense capital is transforming the city's connectivity, commercial viability, and residential appeal. 
+
+Particularly in **South Nagpur**, market experts are projecting an astonishing **5.2X Growth Potential** over the coming years. This makes early investment not just safe, but highly lucrative.
+
+### The Rise of Luxury Assets
+We are seeing a shift towards high-end, lifestyle-oriented properties. A prime example is **Nagpur Marina by The House of Abhinandan Lodha**. Inspired by the world's most iconic marinas, this project is setting a new benchmark for luxury living in Central India.
+
+**Key Highlights of Nagpur Marina:**
+- **Alpha Grade Luxury Asset:** Designed for those who seek the extraordinary.
+- **40+ Curated Amenities:** Including a stunning Infinity Pool where the ordinary ends.
+- **Villa Land Investments:** Starting at ₹67.5 Lakh (All Inclusive) for 1250 sq. ft., offering a tangible, appreciating asset class.
+- **MahaRERA Approved:** Ensuring complete transparency and security (RERA No. PP1190002502095).
+
+Secure your luxury villa land today and become part of Nagpur's extraordinary growth story.
+    `.trim()
+  },
+  {
     slug: 'nagpur-real-estate-market-trends-2026',
     title: 'Nagpur Real Estate Market Trends: What to Expect in 2026',
     excerpt: 'An in-depth analysis of property prices, emerging localities, and why Nagpur is becoming a hotspot for real estate investment.',

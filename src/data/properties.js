@@ -3,6 +3,27 @@
 
 const properties = [
   {
+    slug: 'nagpur-marina-infinity',
+    name: 'Nagpur Marina',
+    location: 'Nagpur',
+    area: 'Nagpur',
+    pricePerSqft: 5400,
+    plotSizes: [1250, 1798],
+    type: 'residential',
+    status: 'available',
+    approvals: [],
+    rera: 'PP1190002502095',
+    loanEligible: true,
+    description: 'The edge of The Infinity Pool is where ordinary ends. Nagpur Marina by The House of Abhinandan Lodha is inspired by the world’s most iconic marinas. Secure your Alpha Grade Luxury Villa Land today.',
+    features: [
+      '40+ Curated Amenities',
+      'Infinity Pool',
+      'Luxury Villa Land',
+      'Alpha Grade Luxury Asset'
+    ],
+    image: '/PROPERTY/infinitypool.png',
+  },
+  {
     slug: 'kamla-greens',
     name: 'Kamla Greens (Saraswati Nagri 9)',
     location: 'Mouza Godhani, Nagpur (Gramin)',
