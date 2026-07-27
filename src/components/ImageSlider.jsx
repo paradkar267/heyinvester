@@ -8,6 +8,7 @@ const images = [
   '/9.png',
   '/10.png',
   '/11.png',
+  '/PROPERTY/chaware.png',
 ];
 
 export default function ImageSlider() {

@@ -12,6 +12,12 @@ export default function PropertyCard({ property }) {
         <span className={`property-card__status property-card__status--${status}`}>
           {statusLabel[status]}
         </span>
+        {property.rera && (
+          <div style={{ position: 'absolute', top: '12px', right: '12px', background: '#fff', border: '2px solid var(--gold-400)', borderRadius: '8px', padding: '4px 8px', fontSize: '11px', fontWeight: 800, color: 'var(--green-950)', display: 'flex', alignItems: 'center', gap: '6px', boxShadow: '0 4px 12px rgba(0,0,0,0.15)', zIndex: 2 }}>
+            <span style={{ background: 'var(--green-50)', color: 'var(--green-800)', padding: '2px 6px', borderRadius: '4px', fontSize: '10px' }}>RERA</span>
+            {property.rera}
+          </div>
+        )}
       </div>
 
       <div className="property-card__body">

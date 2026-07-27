@@ -2034,6 +2034,7 @@ ul, ol { list-style: none; }
 .stagger-revealed > *:nth-child(4) { opacity: 1; transform: none; transition-delay: 0.24s; }
 .stagger-revealed > *:nth-child(5) { opacity: 1; transform: none; transition-delay: 0.30s; }
 .stagger-revealed > *:nth-child(6) { opacity: 1; transform: none; transition-delay: 0.36s; }
+.stagger-revealed > *:nth-child(n+7) { opacity: 1; transform: none; transition-delay: 0.42s; }
 
 /* Legacy — page-load stagger (non-scroll) */
 .stagger > * { animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) both; }
@@ -2043,6 +2044,7 @@ ul, ol { list-style: none; }
 .stagger > *:nth-child(4) { animation-delay: 0.24s; }
 .stagger > *:nth-child(5) { animation-delay: 0.30s; }
 .stagger > *:nth-child(6) { animation-delay: 0.36s; }
+.stagger > *:nth-child(n+7) { animation-delay: 0.42s; }
 
 /* ── Image Slider ────────────────────────────── */
 .slider-wrapper {

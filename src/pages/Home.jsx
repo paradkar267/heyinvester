@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import PropertyCard from '../components/PropertyCard';
 import TrustBadges from '../components/TrustBadges';
@@ -5,9 +6,12 @@ import ImageSlider from '../components/ImageSlider';
 import properties from '../data/properties';
 import useScrollReveal, { useStaggerReveal } from '../hooks/useScrollReveal';
 
-const featured = properties.filter(p => p.status === 'available').slice(0, 3);
+const availableProperties = properties.filter(p => p.status === 'available');
+const comingSoonProjects = properties.filter(p => p.status === 'coming-soon');
 
 export default function Home() {
+  const [showAllAvailable, setShowAllAvailable] = useState(false);
+  const displayedProperties = showAllAvailable ? availableProperties : availableProperties.slice(0, 3);
   const trustRef = useScrollReveal();
   const sectionHeaderRef = useScrollReveal();
   const gridRef = useStaggerReveal();
@@ -169,9 +173,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Image Gallery Slider ────────────────────────────── */}
-      <ImageSlider />
-
       {/* ── Coming Soon: Savitri Park ─────────────────────── */}
       <section className="section" style={{ padding: 'var(--space-4) 0 var(--space-8) 0' }}>
         <div className="container">
@@ -207,9 +208,14 @@ export default function Home() {
                 </li>
               </ul>
               
-              <Link to="/contact" className="btn btn--accent" style={{ padding: '14px 28px', fontSize: '15px' }}>
-                Register Interest
-              </Link>
+              <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+                <Link to="/properties/savitri-park" className="btn" style={{ padding: '14px 28px', fontSize: '15px', background: 'var(--white)', color: 'var(--green-950)' }}>
+                  View Details
+                </Link>
+                <Link to="/contact" className="btn btn--accent" style={{ padding: '14px 28px', fontSize: '15px' }}>
+                  Register Interest
+                </Link>
+              </div>
             </div>
 
             {/* Right: Video */}
@@ -230,6 +236,48 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Coming Soon Grid ──────────────── */}
+      {comingSoonProjects.length > 0 && (
+        <section className="section" style={{ 
+          paddingTop: 'var(--space-4)',
+          paddingBottom: 'var(--space-12)',
+          position: 'relative',
+          zIndex: 3,
+        }}>
+          <div className="container">
+            <div style={{ 
+              background: 'linear-gradient(135deg, var(--gold-100) 0%, #FFFFFF 100%)',
+              borderRadius: '32px',
+              padding: 'var(--space-10) var(--space-6)',
+              boxShadow: '0 24px 50px rgba(217,164,65,0.2)',
+              border: '2px solid var(--gold-200)',
+              position: 'relative',
+              overflow: 'hidden'
+            }}>
+              {/* Decor */}
+              <div style={{ position: 'absolute', top: '-50px', right: '-50px', width: '250px', height: '250px', background: 'var(--gold-300)', borderRadius: '50%', opacity: 0.2, filter: 'blur(50px)', zIndex: 0 }}></div>
+              <div style={{ position: 'absolute', bottom: '-50px', left: '-50px', width: '250px', height: '250px', background: 'var(--green-200)', borderRadius: '50%', opacity: 0.2, filter: 'blur(50px)', zIndex: 0 }}></div>
+
+              <div className="section-header" style={{ marginBottom: 'var(--space-8)', position: 'relative', zIndex: 1 }}>
+                <span className="section-header__label" style={{ color: 'var(--green-950)', background: 'var(--gold-400)', fontWeight: 800, border: 'none', boxShadow: '0 4px 12px rgba(217,164,65,0.4)' }}>Pre-Launch</span>
+                <h2 style={{ color: 'var(--green-950)' }}>Coming Soon Projects</h2>
+                <p style={{ color: 'var(--gray-700)' }}>Get early access to our upcoming premium layouts.</p>
+              </div>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--space-6)', justifyContent: 'center', position: 'relative', zIndex: 1 }}>
+                {comingSoonProjects.map(p => (
+                  <div key={p.slug} style={{ flex: '0 1 380px', width: '100%' }}>
+                    <PropertyCard property={p} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ── Image Gallery Slider ────────────────────────────── */}
+      <ImageSlider />
+
       {/* ── Featured Properties ──────────────── */}
       <section className="section" style={{ paddingTop: 'var(--space-8)' }}>
         <div className="container">
@@ -239,10 +287,19 @@ export default function Home() {
             <p>Premium plots with government approvals and loan assistance.</p>
           </div>
           <div className="grid grid--3" ref={gridRef}>
-            {featured.map(p => <PropertyCard key={p.slug} property={p} />)}
+            {displayedProperties.map(p => <PropertyCard key={p.slug} property={p} />)}
           </div>
           <div style={{ textAlign: 'center', marginTop: 'var(--space-10)' }}>
-            <Link to="/properties" className="btn btn--ghost btn--lg">View All Properties →</Link>
+            {!showAllAvailable && availableProperties.length > 3 ? (
+              <button 
+                onClick={() => setShowAllAvailable(true)} 
+                className="btn btn--ghost btn--lg"
+              >
+                View All Properties →
+              </button>
+            ) : (
+              <Link to="/properties" className="btn btn--ghost btn--lg">View Full Directory →</Link>
+            )}
           </div>
         </div>
       </section>

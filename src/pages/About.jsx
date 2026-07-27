@@ -3,10 +3,9 @@ import useScrollReveal, { useStaggerReveal } from '../hooks/useScrollReveal';
 import TrustBadges from '../components/TrustBadges';
 
 const team = [
+  { name: 'Gyaneshwar Sahu', initials: 'GS', image: '/thakur.jpeg', role: 'Sales Head', bio: 'Specialises in land acquisition, regulatory approvals, and project planning.' },
   { name: 'Nandlal Sahu', initials: 'NS', image: '/tandekar.png', role: 'Founder & Director', bio: 'Over 15 years of real estate experience across Nagpur and Vidarbha.' },
-  { name: 'Gyaneshwar Sahu', initials: 'GS', image: '/thakur.jpeg', role: 'Co-Director', bio: 'Specialises in land acquisition, regulatory approvals, and project planning.' },
-  { name: 'Sushil Hatwar', initials: 'SH', image: '/sushil.jpeg', role: 'Sales Head', bio: 'Trusted advisor to 200+ investors. Expert in plot selection and financing.' },
-  { name: 'Vishal Lute', initials: 'VL', image: '/vishal.jpeg', role: 'Operations Manager', bio: 'Manages site development, documentation, and customer coordination.' },
+  { name: 'Sunil', initials: 'S', image: '/sushil.jpeg', role: 'Operational Head', bio: 'Trusted advisor to 200+ investors. Expert in plot selection and financing.' },
 ];
 
 export default function About() {
@@ -128,30 +127,47 @@ export default function About() {
       </section>
 
       {/* Team */}
-      <section className="section section--alt">
-        <div className="container">
-          <div className="section-header">
-            <span className="section-header__label">Our Team</span>
-            <h2>Meet the People Behind Hey Investor</h2>
+      <section className="section" style={{ background: 'linear-gradient(135deg, var(--green-950) 0%, var(--green-900) 100%)', position: 'relative', overflow: 'hidden', padding: 'calc(var(--space-20) + 20px) 0' }}>
+        {/* Decorative background elements */}
+        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'url(/hero-bg.png) center/cover no-repeat', opacity: 0.1, zIndex: 0 }}></div>
+        <div style={{ position: 'absolute', top: '-10%', left: '-5%', width: '500px', height: '500px', background: 'rgba(217,164,65,0.15)', filter: 'blur(80px)', borderRadius: '50%', zIndex: 0 }}></div>
+        <div style={{ position: 'absolute', bottom: '-20%', right: '-10%', width: '500px', height: '500px', background: 'rgba(255,255,255,0.05)', filter: 'blur(100px)', borderRadius: '50%', zIndex: 0 }}></div>
+        
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+          <div className="section-header" style={{ marginBottom: 'var(--space-16)' }}>
+            <span className="section-header__label" style={{ color: 'var(--gold-500)', background: 'rgba(217,164,65,0.15)', border: '1px solid rgba(217,164,65,0.2)' }}>Our Team</span>
+            <h2 style={{ color: 'var(--white)' }}>Meet the People Behind Hey Investor</h2>
+            <p style={{ color: 'rgba(255,255,255,0.8)', maxWidth: '600px', margin: '0 auto' }}>A dedicated team of experts committed to your real estate success and financial growth.</p>
           </div>
-          <div className="grid grid--4">
-            {team.map(({ name, initials, image, role, bio }) => (
-              <div key={name} className="team-card">
-                <div className="team-card__avatar">
+          <div className="grid grid--3">
+            {team.map(({ name, initials, image, role, bio }, idx) => (
+              <div key={name} className="team-card" style={{ 
+                border: idx === 1 ? '2px solid var(--gold-400)' : '1px solid rgba(255,255,255,0.8)',
+                boxShadow: idx === 1 ? '0 24px 48px rgba(0,0,0,0.3)' : '0 12px 32px rgba(0,0,0,0.15)',
+                position: 'relative',
+                zIndex: idx === 1 ? 2 : 1,
+                paddingTop: idx === 1 ? 'var(--space-10)' : 'var(--space-8)'
+              }}>
+                {idx === 1 && (
+                  <div style={{ position: 'absolute', top: '-16px', left: '50%', transform: 'translateX(-50%)', background: 'linear-gradient(135deg, var(--gold-500), var(--gold-400))', color: 'var(--green-950)', fontSize: '12px', fontWeight: 800, padding: '6px 20px', borderRadius: '30px', letterSpacing: '1.5px', textTransform: 'uppercase', boxShadow: '0 8px 16px rgba(217,164,65,0.3)' }}>
+                    Leadership
+                  </div>
+                )}
+                <div className="team-card__avatar" style={{ border: idx === 1 ? '4px solid var(--gold-100)' : '4px solid var(--green-50)', width: idx === 1 ? '130px' : '110px', height: idx === 1 ? '130px' : '110px', marginBottom: 'var(--space-6)' }}>
                   {image ? <img src={image} alt={name} /> : initials}
                 </div>
-                <h4 className="team-card__name">{name}</h4>
-                <div className="team-card__role">{role}</div>
-                <p className="team-card__bio">{bio}</p>
-                <div className="team-card__actions" style={{ display: 'flex', gap: '8px', justifyContent: 'center' }}>
-                  <a href="https://wa.me/919325650256" style={{ width: '36px', height: '36px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--gray-200)', color: '#25D366', transition: 'all 0.2s', textDecoration: 'none', background: 'var(--white)' }} target="_blank" rel="noopener noreferrer">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                <h4 className="team-card__name" style={{ color: 'var(--green-950)', fontSize: idx === 1 ? '1.5rem' : '1.25rem', marginBottom: 'var(--space-2)' }}>{name}</h4>
+                <div className="team-card__role" style={{ color: 'var(--gold-600)', fontWeight: 800, letterSpacing: '0.5px', fontSize: '0.85rem', textTransform: 'uppercase' }}>{role}</div>
+                <p className="team-card__bio" style={{ color: 'var(--gray-600)', marginTop: 'var(--space-4)', fontSize: '0.95rem', lineHeight: 1.6 }}>{bio}</p>
+                <div className="team-card__actions" style={{ display: 'flex', gap: '12px', justifyContent: 'center', marginTop: 'auto', paddingTop: 'var(--space-6)' }}>
+                  <a href="https://wa.me/919325650256" style={{ width: '40px', height: '40px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--gray-200)', color: '#25D366', transition: 'all 0.2s', textDecoration: 'none', background: 'var(--white)' }} target="_blank" rel="noopener noreferrer">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
                   </a>
-                  <a href="https://www.instagram.com/heyinvestor_official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" style={{ width: '36px', height: '36px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--gray-200)', color: '#E1306C', transition: 'all 0.2s', textDecoration: 'none', background: 'var(--white)' }} target="_blank" rel="noopener noreferrer">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                  <a href="https://www.instagram.com/heyinvestor_official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" style={{ width: '40px', height: '40px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--gray-200)', color: '#E1306C', transition: 'all 0.2s', textDecoration: 'none', background: 'var(--white)' }} target="_blank" rel="noopener noreferrer">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                   </a>
-                  <a href="https://www.linkedin.com/company/hey-investor-pvt-ltd-official/" style={{ width: '36px', height: '36px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--gray-200)', color: '#0A66C2', transition: 'all 0.2s', textDecoration: 'none', background: 'var(--white)' }} target="_blank" rel="noopener noreferrer">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                  <a href="https://www.linkedin.com/company/hey-investor-pvt-ltd-official/" style={{ width: '40px', height: '40px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--gray-200)', color: '#0A66C2', transition: 'all 0.2s', textDecoration: 'none', background: 'var(--white)' }} target="_blank" rel="noopener noreferrer">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
                   </a>
                 </div>
               </div>
