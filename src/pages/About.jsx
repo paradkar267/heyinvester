@@ -156,55 +156,130 @@ export default function About() {
       </div>
     </section >
 
-      {/* Office Expert */ }
-      < section className = "section" style = {{ paddingTop: 0 }
-}>
-  <div className="container">
-    <div className="section-header">
-      <span className="section-header__label">Expert Guidance</span>
-      <h2>Our Office Expert</h2>
-      <p className="section-header__desc" style={{ maxWidth: '800px', margin: '0 auto var(--space-10)' }}>
-        At Hey Investor Pvt. Ltd., we believe that expert guidance is key to making informed and confident real estate decisions. Meet our dedicated office expert, a seasoned professional with a wealth of knowledge and a passion for helping clients navigate the complexities of the real estate market.
-      </p>
-    </div>
+      {/* Office Expert */}
+      <section style={{ position: 'relative', padding: '0', background: '#fafafa', overflow: 'hidden' }}>
+        {/* Background cityscape */}
+        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '400px', background: 'url(/hero-bg.png) center/cover no-repeat', opacity: 0.15, zIndex: 0 }}></div>
+        
+        <div style={{ position: 'relative', zIndex: 1, paddingTop: 'var(--space-12)' }}>
+          <div className="container">
+            <div style={{ textAlign: 'center', marginBottom: 'var(--space-8)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', color: 'var(--gold-600)', fontSize: '12px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '16px' }}>
+                <div style={{ height: '1px', width: '30px', background: 'var(--gold-300)' }}></div>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+                EXPERT GUIDANCE
+                <div style={{ height: '1px', width: '30px', background: 'var(--gold-300)' }}></div>
+              </div>
+              
+              <h2 style={{ fontSize: '3.5rem', fontFamily: '"Playfair Display", serif', color: 'var(--green-950)', marginBottom: '12px' }}>Our Office Expert</h2>
+              
+              <div style={{ color: 'var(--gold-500)', marginBottom: '24px', display: 'flex', justifyContent: 'center' }}>
+                <svg width="40" height="20" viewBox="0 0 40 20" fill="currentColor">
+                  <path d="M20 0C20 0 16 8 10 10C16 12 20 20 20 20C20 20 24 12 30 10C24 8 20 0 20 0Z" />
+                </svg>
+              </div>
 
-    <div className="grid grid--2" style={{ marginBottom: 'var(--space-12)', textAlign: 'left', gap: 'var(--space-8)' }}>
-      <div className="expert-card">
-        <div className="expert-card__icon-wrapper">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              <p style={{ maxWidth: '800px', margin: '0 auto', color: 'var(--gray-600)', fontSize: '1.05rem', lineHeight: 1.6 }}>
+                At Hey Investor Pvt. Ltd., we believe that expert guidance is key to making informed and confident real estate decisions. Meet our dedicated office expert, a seasoned professional with a wealth of knowledge and a passion for helping clients navigate the complexities of the real estate market.
+              </p>
+            </div>
+          </div>
         </div>
-        <h4 style={{ color: 'var(--green-900)', marginBottom: 'var(--space-2)' }}>In-Depth Knowledge</h4>
-        <p style={{ fontSize: 'var(--text-sm)', color: 'var(--gray-600)', margin: 0 }}>With extensive experience in the real estate industry, our expert is well-versed in market trends, property values, and the nuances of property transactions.</p>
-      </div>
-      <div className="expert-card">
-        <div className="expert-card__icon-wrapper">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-        </div>
-        <h4 style={{ color: 'var(--green-900)', marginBottom: 'var(--space-2)' }}>Personalized Assistance</h4>
-        <p style={{ fontSize: 'var(--text-sm)', color: 'var(--gray-600)', margin: 0 }}>Whether you're buying your first home, investing in commercial property, or seeking the perfect plot, our office expert provides tailored advice to meet your unique needs.</p>
-      </div>
-      <div className="expert-card">
-        <div className="expert-card__icon-wrapper">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 12 12 17 22 12"></polyline><polyline points="2 17 12 22 22 17"></polyline></svg>
-        </div>
-        <h4 style={{ color: 'var(--green-900)', marginBottom: 'var(--space-2)' }}>Seamless Process</h4>
-        <p style={{ fontSize: 'var(--text-sm)', color: 'var(--gray-600)', margin: 0 }}>From initial consultation to finalizing the deal, our expert ensures a smooth and hassle-free experience, handling all the details with precision and care.</p>
-      </div>
-      <div className="expert-card">
-        <div className="expert-card__icon-wrapper">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-        </div>
-        <h4 style={{ color: 'var(--green-900)', marginBottom: 'var(--space-2)' }}>Trust and Reliability</h4>
-        <p style={{ fontSize: 'var(--text-sm)', color: 'var(--gray-600)', margin: 0 }}>Our office expert embodies the core values of Hey Investor Pvt. Ltd. – integrity, transparency, and commitment to excellence.</p>
-      </div>
-    </div>
 
-    <div style={{ textAlign: 'center' }}>
-      <h3 style={{ fontSize: 'var(--text-2xl)', color: 'var(--green-900)', marginBottom: 'var(--space-3)' }}>Ready to make your real estate dreams a reality?</h3>
-      <p style={{ color: 'var(--gray-600)', maxWidth: '600px', margin: '0 auto' }}>Reach out to our office expert today and embark on a journey towards securing your ideal property with confidence and ease.</p>
-    </div>
-  </div>
-      </section >
+        {/* Green Wave Divider */}
+        <div style={{ position: 'relative', width: '100%', height: '80px', zIndex: 1, marginTop: '20px', marginBottom: '30px' }}>
+          <svg viewBox="0 0 1440 80" preserveAspectRatio="none" style={{ width: '100%', height: '80px', display: 'block' }}>
+            <path d="M-10,40 C320,90 420,-10 720,20 C1020,50 1120,90 1450,40" fill="none" stroke="var(--green-900)" strokeWidth="16" />
+            <path d="M-10,30 C320,80 420,-20 720,10 C1020,40 1120,80 1450,30" fill="none" stroke="var(--gold-400)" strokeWidth="3" />
+          </svg>
+        </div>
+
+        {/* Cards Section */}
+        <div style={{ position: 'relative', paddingBottom: 'var(--space-20)', zIndex: 1 }}>
+          <div className="container">
+            <div className="grid grid--2" style={{ gap: 'var(--space-8)' }}>
+              
+              {/* Card 1 */}
+              <div style={{ position: 'relative', background: '#fff', borderRadius: '16px', padding: '32px 32px 32px 48px', display: 'flex', gap: '24px', alignItems: 'center', boxShadow: '0 10px 40px rgba(0,0,0,0.06)', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: '20px', background: 'var(--green-900)', clipPath: 'polygon(0 0, 100% 0, 60% 50%, 100% 100%, 0 100%)' }}></div>
+                <div style={{ flexShrink: 0, width: '80px', height: '80px', borderRadius: '50%', background: '#fff', boxShadow: '0 8px 24px rgba(15,91,63,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--green-900)', position: 'relative', zIndex: 1 }}>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                  <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundImage: 'radial-gradient(var(--green-100) 1.5px, transparent 1.5px)', backgroundSize: '6px 6px', zIndex: -1, opacity: 0.6, borderRadius: '50%' }}></div>
+                </div>
+                <div style={{ flex: 1 }}>
+                  <h3 style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.4rem', color: 'var(--green-950)', marginBottom: '10px' }}>In-Depth Knowledge</h3>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '12px' }}>
+                    <div style={{ height: '1px', width: '30px', background: 'var(--gold-400)' }}></div>
+                    <div style={{ width: '4px', height: '4px', background: 'var(--gold-500)', transform: 'rotate(45deg)' }}></div>
+                    <div style={{ height: '1px', width: '30px', background: 'var(--gold-400)' }}></div>
+                  </div>
+                  <p style={{ color: 'var(--gray-600)', fontSize: '0.95rem', lineHeight: 1.6, margin: 0 }}>With extensive experience in the real estate industry, our expert is well-versed in market trends, property values, and the nuances of property transactions.</p>
+                </div>
+              </div>
+
+              {/* Card 2 */}
+              <div style={{ position: 'relative', background: '#fff', borderRadius: '16px', padding: '32px 32px 32px 48px', display: 'flex', gap: '24px', alignItems: 'center', boxShadow: '0 10px 40px rgba(0,0,0,0.06)', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: '20px', background: 'var(--green-900)', clipPath: 'polygon(0 0, 100% 0, 60% 50%, 100% 100%, 0 100%)' }}></div>
+                <div style={{ flexShrink: 0, width: '80px', height: '80px', borderRadius: '50%', background: '#fff', boxShadow: '0 8px 24px rgba(15,91,63,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--green-900)', position: 'relative', zIndex: 1 }}>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                  <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundImage: 'radial-gradient(var(--green-100) 1.5px, transparent 1.5px)', backgroundSize: '6px 6px', zIndex: -1, opacity: 0.6, borderRadius: '50%' }}></div>
+                </div>
+                <div style={{ flex: 1 }}>
+                  <h3 style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.4rem', color: 'var(--green-950)', marginBottom: '10px' }}>Personalized Assistance</h3>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '12px' }}>
+                    <div style={{ height: '1px', width: '30px', background: 'var(--gold-400)' }}></div>
+                    <div style={{ width: '4px', height: '4px', background: 'var(--gold-500)', transform: 'rotate(45deg)' }}></div>
+                    <div style={{ height: '1px', width: '30px', background: 'var(--gold-400)' }}></div>
+                  </div>
+                  <p style={{ color: 'var(--gray-600)', fontSize: '0.95rem', lineHeight: 1.6, margin: 0 }}>Whether you're buying your first home, investing in commercial property, or seeking the perfect plot, our office expert provides tailored advice to meet your unique needs.</p>
+                </div>
+              </div>
+
+              {/* Card 3 */}
+              <div style={{ position: 'relative', background: '#fff', borderRadius: '16px', padding: '32px 32px 32px 48px', display: 'flex', gap: '24px', alignItems: 'center', boxShadow: '0 10px 40px rgba(0,0,0,0.06)', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: '20px', background: 'var(--green-900)', clipPath: 'polygon(0 0, 100% 0, 60% 50%, 100% 100%, 0 100%)' }}></div>
+                <div style={{ flexShrink: 0, width: '80px', height: '80px', borderRadius: '50%', background: '#fff', boxShadow: '0 8px 24px rgba(15,91,63,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--green-900)', position: 'relative', zIndex: 1 }}>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 12 12 17 22 12"></polyline><polyline points="2 17 12 22 22 17"></polyline></svg>
+                  <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundImage: 'radial-gradient(var(--green-100) 1.5px, transparent 1.5px)', backgroundSize: '6px 6px', zIndex: -1, opacity: 0.6, borderRadius: '50%' }}></div>
+                </div>
+                <div style={{ flex: 1 }}>
+                  <h3 style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.4rem', color: 'var(--green-950)', marginBottom: '10px' }}>Seamless Process</h3>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '12px' }}>
+                    <div style={{ height: '1px', width: '30px', background: 'var(--gold-400)' }}></div>
+                    <div style={{ width: '4px', height: '4px', background: 'var(--gold-500)', transform: 'rotate(45deg)' }}></div>
+                    <div style={{ height: '1px', width: '30px', background: 'var(--gold-400)' }}></div>
+                  </div>
+                  <p style={{ color: 'var(--gray-600)', fontSize: '0.95rem', lineHeight: 1.6, margin: 0 }}>From initial consultation to finalizing the deal, our expert ensures a smooth and hassle-free experience, handling all the details with precision and care.</p>
+                </div>
+              </div>
+
+              {/* Card 4 */}
+              <div style={{ position: 'relative', background: '#fff', borderRadius: '16px', padding: '32px 32px 32px 48px', display: 'flex', gap: '24px', alignItems: 'center', boxShadow: '0 10px 40px rgba(0,0,0,0.06)', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: '20px', background: 'var(--green-900)', clipPath: 'polygon(0 0, 100% 0, 60% 50%, 100% 100%, 0 100%)' }}></div>
+                <div style={{ flexShrink: 0, width: '80px', height: '80px', borderRadius: '50%', background: '#fff', boxShadow: '0 8px 24px rgba(15,91,63,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--green-900)', position: 'relative', zIndex: 1 }}>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                  <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundImage: 'radial-gradient(var(--green-100) 1.5px, transparent 1.5px)', backgroundSize: '6px 6px', zIndex: -1, opacity: 0.6, borderRadius: '50%' }}></div>
+                </div>
+                <div style={{ flex: 1 }}>
+                  <h3 style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.4rem', color: 'var(--green-950)', marginBottom: '10px' }}>Trust and Reliability</h3>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '12px' }}>
+                    <div style={{ height: '1px', width: '30px', background: 'var(--gold-400)' }}></div>
+                    <div style={{ width: '4px', height: '4px', background: 'var(--gold-500)', transform: 'rotate(45deg)' }}></div>
+                    <div style={{ height: '1px', width: '30px', background: 'var(--gold-400)' }}></div>
+                  </div>
+                  <p style={{ color: 'var(--gray-600)', fontSize: '0.95rem', lineHeight: 1.6, margin: 0 }}>Our office expert embodies the core values of Hey Investor Pvt. Ltd. – integrity, transparency, and commitment to excellence.</p>
+                </div>
+              </div>
+
+            </div>
+
+            <div style={{ textAlign: 'center', marginTop: 'var(--space-12)' }}>
+              <h3 style={{ fontSize: 'var(--text-2xl)', color: 'var(--green-900)', marginBottom: 'var(--space-3)' }}>Ready to make your real estate dreams a reality?</h3>
+              <p style={{ color: 'var(--gray-600)', maxWidth: '600px', margin: '0 auto' }}>Reach out to our office expert today and embark on a journey towards securing your ideal property with confidence and ease.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
   {/* Team */ }
   < section className = "section" style = {{ background: 'linear-gradient(135deg, var(--green-950) 0%, var(--green-900) 100%)', position: 'relative', overflow: 'hidden', padding: 'calc(var(--space-20) + 20px) 0' }}>
