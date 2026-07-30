@@ -61,6 +61,7 @@ export default function Home() {
         </div>
       </section>
 
+
       {/* ── Perfect Property Video Section (Redesigned) ───────────────────────────────── */}
       <section className="section" style={{ paddingTop: 'var(--space-12)', paddingBottom: 'var(--space-24)' }}>
         <div className="container">
@@ -236,44 +237,45 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Coming Soon Grid ──────────────── */}
-      {comingSoonProjects.length > 0 && (
-        <section className="section" style={{ 
-          paddingTop: 'var(--space-4)',
-          paddingBottom: 'var(--space-12)',
-          position: 'relative',
-          zIndex: 3,
-        }}>
-          <div className="container">
-            <div style={{ 
-              background: 'linear-gradient(135deg, var(--gold-100) 0%, #FFFFFF 100%)',
-              borderRadius: '32px',
-              padding: 'var(--space-10) var(--space-6)',
-              boxShadow: '0 24px 50px rgba(217,164,65,0.2)',
-              border: '2px solid var(--gold-200)',
-              position: 'relative',
-              overflow: 'hidden'
-            }}>
-              {/* Decor */}
-              <div style={{ position: 'absolute', top: '-50px', right: '-50px', width: '250px', height: '250px', background: 'var(--gold-300)', borderRadius: '50%', opacity: 0.2, filter: 'blur(50px)', zIndex: 0 }}></div>
-              <div style={{ position: 'absolute', bottom: '-50px', left: '-50px', width: '250px', height: '250px', background: 'var(--green-200)', borderRadius: '50%', opacity: 0.2, filter: 'blur(50px)', zIndex: 0 }}></div>
+      {/* ── Coming Soon Projects ─────────────────── */}
+      <section className="section" style={{ background: 'linear-gradient(160deg, #f7fdf9 0%, #edf7f2 40%, #f5f9ed 100%)', padding: '60px 0', position: 'relative', overflow: 'hidden' }}>
+        <span className="cs-leaf cs-leaf--1">🌿</span>
+        <span className="cs-leaf cs-leaf--2">🍃</span>
+        <span className="cs-leaf cs-leaf--3">🌿</span>
+        <span className="cs-leaf cs-leaf--4">🍃</span>
+        <div className="container cs-hero__inner">
+          <div className="cs-hero__badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            PRE-LAUNCH
+          </div>
+          <h2 className="cs-hero__title">COMING SOON PROJECTS</h2>
+          <p className="cs-hero__subtitle">Get early access to our upcoming premium layouts</p>
 
-              <div className="section-header" style={{ marginBottom: 'var(--space-8)', position: 'relative', zIndex: 1 }}>
-                <span className="section-header__label" style={{ color: 'var(--green-950)', background: 'var(--gold-400)', fontWeight: 800, border: 'none', boxShadow: '0 4px 12px rgba(217,164,65,0.4)' }}>Pre-Launch</span>
-                <h2 style={{ color: 'var(--green-950)' }}>Coming Soon Projects</h2>
-                <p style={{ color: 'var(--gray-700)' }}>Get early access to our upcoming premium layouts.</p>
+          <div style={{ maxWidth: '800px', margin: '0 auto', background: '#fff', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(15,91,63,0.08)' }}>
+            <img src="/PROPERTY/savitri.png" alt="Savitri Park" style={{ width: '100%', display: 'block' }} />
+            
+            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 'var(--space-4)', padding: '20px 32px', borderTop: '1px solid var(--gray-100)', backgroundColor: '#fff' }}>
+              <div style={{ textAlign: 'left' }}>
+                <div style={{ fontSize: '12px', color: 'var(--gray-500)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '4px' }}>Starting At</div>
+                <div style={{ fontSize: '28px', fontWeight: 800, color: 'var(--green-900)', lineHeight: 1, display: 'flex', alignItems: 'baseline', gap: '4px' }}>
+                  ₹1,200 <span style={{ fontSize: '15px', fontWeight: 600, color: 'var(--gray-500)' }}>/sq.ft.</span>
+                </div>
               </div>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--space-6)', justifyContent: 'center', position: 'relative', zIndex: 1 }}>
-                {comingSoonProjects.map(p => (
-                  <div key={p.slug} style={{ flex: '0 1 min(100%, 380px)', width: '100%' }}>
-                    <PropertyCard property={p} />
-                  </div>
-                ))}
+              <div style={{ display: 'flex', gap: '10px' }}>
+                <span style={{ padding: '6px 14px', background: 'var(--green-50)', color: 'var(--green-800)', borderRadius: '100px', fontSize: '13px', fontWeight: 600, border: '1px solid var(--green-100)' }}>NMRDA</span>
+                <span style={{ padding: '6px 14px', background: 'var(--green-50)', color: 'var(--green-800)', borderRadius: '100px', fontSize: '13px', fontWeight: 600, border: '1px solid var(--green-100)' }}>RL Plots</span>
+                <span style={{ padding: '6px 14px', background: 'var(--gold-50)', color: 'var(--gold-700)', borderRadius: '100px', fontSize: '13px', fontWeight: 600, border: '1px solid var(--gold-200)' }}>90% Bank Finance</span>
               </div>
+              <Link to="/contact" className="btn btn--primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '12px 28px', borderRadius: '100px', fontWeight: 600 }}>
+                Notify Me
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </Link>
             </div>
           </div>
-        </section>
-      )}
+        </div>
+      </section>
+
+
 
       {/* ── Image Gallery Slider ────────────────────────────── */}
       <ImageSlider />
