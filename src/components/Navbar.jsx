@@ -27,9 +27,18 @@ export default function Navbar() {
     <>
       <nav className={`nav${scrolled ? ' nav--scrolled' : ''}`}>
         <div className="container nav__inner">
-          <Link to="/" className="nav__logo" aria-label="Hey Investor">
-            <img src="/logo (1).png" alt="Hey Investor Logo" />
-          </Link>
+          <div className="nav__brand">
+            <Link to="/" className="nav__logo" aria-label="Hey Investor">
+              <img src="/logo (1).png" alt="Hey Investor Logo" />
+            </Link>
+            <div className="nav__rera-info">
+              <img src="/qrcode.png" alt="MahaRERA QR Code" className="nav__qrcode" />
+              <div className="nav__rera-text">
+                <span className="nav__rera-label">MahaRERA Registration No.</span>
+                <span className="nav__rera-number">U70109MH2021PTC369834</span>
+              </div>
+            </div>
+          </div>
 
           <div className="nav__links">
             {navLinks.map(({ to, label }) => (

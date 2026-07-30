@@ -26,8 +26,8 @@ export default function Home() {
       {/* ── Hero ────────────────────────────── */}
       <section className="hero">
         <div className="container">
-          <div className="hero__content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', textAlign: 'left' }}>
-            <h1 className="hero__title" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', lineHeight: 1.1, letterSpacing: '-0.02em', marginBottom: 'var(--space-6)', fontWeight: 800 }}>
+          <div className="hero__content">
+            <h1 className="hero__title">
               Build Your <span style={{ background: 'linear-gradient(135deg, var(--green-700) 0%, var(--green-950) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Legacy</span><br />
               on Land You Can{' '}
               <span style={{ position: 'relative', display: 'inline-block' }}>
@@ -38,11 +38,11 @@ export default function Home() {
               </span>
             </h1>
 
-            <p className="hero__subtitle" style={{ fontSize: 'var(--text-lg)', color: 'var(--gray-600)', maxWidth: '580px', marginBottom: 'var(--space-8)', lineHeight: 1.6 }}>
+            <p className="hero__subtitle">
               Premium, NMRDA &amp; RL approved residential plots in Nagpur's fastest-growing corridors. Secure your future with prime locations and easy 90% bank financing.
             </p>
 
-            <div className="hero__ctas" style={{ display: 'flex', gap: 'var(--space-4)', flexWrap: 'wrap' }}>
+            <div className="hero__ctas">
               <Link to="/properties" className="btn btn--primary btn--lg" style={{ boxShadow: '0 8px 24px rgba(10, 61, 42, 0.2)' }}>
                 View Properties
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginLeft: '8px' }}><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>

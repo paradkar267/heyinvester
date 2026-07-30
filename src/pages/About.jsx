@@ -3,8 +3,8 @@ import useScrollReveal, { useStaggerReveal } from '../hooks/useScrollReveal';
 import TrustBadges from '../components/TrustBadges';
 
 const team = [
-  { name: 'Gyaneshwar Sahu', initials: 'GS', image: '/thakur.jpeg', role: 'Sales Head', bio: 'Specialises in land acquisition, regulatory approvals, and project planning.' },
-  { name: 'Nandlal Sahu', initials: 'NS', image: '/tandekar.png', role: 'Founder & Director', bio: 'Over 15 years of real estate experience across Nagpur and Vidarbha.' },
+  { name: 'Gyaneshwar Singh', initials: 'GS', image: '/thakur.jpeg', role: 'Sales Head', bio: 'Specialises in land acquisition, regulatory approvals, and project planning.' },
+  { name: 'Nandlal Shau', initials: 'NS', image: '/tandekar.png', role: 'Founder & Director', bio: 'Over 15 years of real estate experience across Nagpur and Vidarbha.' },
   { name: 'Sunil', initials: 'S', image: '/sushil.jpeg', role: 'Operational Head', bio: 'Trusted advisor to 200+ investors. Expert in plot selection and financing.' },
 ];
 
@@ -57,7 +57,7 @@ export default function About() {
                 <div className="about-value-card__divider"></div>
                 <p>We only list NMRDA & RL cleared plots. No legal hassles, ever.</p>
               </div>
-              <div className="about-value-card" style={{ transform: 'translateY(24px)' }}>
+              <div className="about-value-card about-value-card--offset">
                 <div className="about-value-card__icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" /></svg>
                 </div>
@@ -75,7 +75,7 @@ export default function About() {
                 <div className="about-value-card__divider"></div>
                 <p>From plot selection to financing and final registration, we handle everything.</p>
               </div>
-              <div className="about-value-card" style={{ transform: 'translateY(24px)' }}>
+              <div className="about-value-card about-value-card--offset">
                 <div className="about-value-card__icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="12" y1="16" x2="12" y2="12" /><line x1="12" y1="8" x2="12.01" y2="8" /></svg>
                 </div>
@@ -100,20 +100,32 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid grid--2" style={{ marginBottom: 'var(--space-12)', textAlign: 'left', gap: 'var(--space-6)' }}>
-            <div style={{ background: '#fff', padding: 'var(--space-6)', borderRadius: 'var(--radius-lg)', boxShadow: '0 4px 12px rgba(15,91,63,0.05)', border: '1px solid var(--gray-100)' }}>
+          <div className="grid grid--2" style={{ marginBottom: 'var(--space-12)', textAlign: 'left', gap: 'var(--space-8)' }}>
+            <div className="expert-card">
+              <div className="expert-card__icon-wrapper">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              </div>
               <h4 style={{ color: 'var(--green-900)', marginBottom: 'var(--space-2)' }}>In-Depth Knowledge</h4>
               <p style={{ fontSize: 'var(--text-sm)', color: 'var(--gray-600)', margin: 0 }}>With extensive experience in the real estate industry, our expert is well-versed in market trends, property values, and the nuances of property transactions.</p>
             </div>
-            <div style={{ background: '#fff', padding: 'var(--space-6)', borderRadius: 'var(--radius-lg)', boxShadow: '0 4px 12px rgba(15,91,63,0.05)', border: '1px solid var(--gray-100)' }}>
+            <div className="expert-card">
+              <div className="expert-card__icon-wrapper">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
               <h4 style={{ color: 'var(--green-900)', marginBottom: 'var(--space-2)' }}>Personalized Assistance</h4>
               <p style={{ fontSize: 'var(--text-sm)', color: 'var(--gray-600)', margin: 0 }}>Whether you're buying your first home, investing in commercial property, or seeking the perfect plot, our office expert provides tailored advice to meet your unique needs.</p>
             </div>
-            <div style={{ background: '#fff', padding: 'var(--space-6)', borderRadius: 'var(--radius-lg)', boxShadow: '0 4px 12px rgba(15,91,63,0.05)', border: '1px solid var(--gray-100)' }}>
+            <div className="expert-card">
+              <div className="expert-card__icon-wrapper">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 12 12 17 22 12"></polyline><polyline points="2 17 12 22 22 17"></polyline></svg>
+              </div>
               <h4 style={{ color: 'var(--green-900)', marginBottom: 'var(--space-2)' }}>Seamless Process</h4>
               <p style={{ fontSize: 'var(--text-sm)', color: 'var(--gray-600)', margin: 0 }}>From initial consultation to finalizing the deal, our expert ensures a smooth and hassle-free experience, handling all the details with precision and care.</p>
             </div>
-            <div style={{ background: '#fff', padding: 'var(--space-6)', borderRadius: 'var(--radius-lg)', boxShadow: '0 4px 12px rgba(15,91,63,0.05)', border: '1px solid var(--gray-100)' }}>
+            <div className="expert-card">
+              <div className="expert-card__icon-wrapper">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
               <h4 style={{ color: 'var(--green-900)', marginBottom: 'var(--space-2)' }}>Trust and Reliability</h4>
               <p style={{ fontSize: 'var(--text-sm)', color: 'var(--gray-600)', margin: 0 }}>Our office expert embodies the core values of Hey Investor Pvt. Ltd. – integrity, transparency, and commitment to excellence.</p>
             </div>
@@ -132,7 +144,7 @@ export default function About() {
         <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'url(/hero-bg.png) center/cover no-repeat', opacity: 0.1, zIndex: 0 }}></div>
         <div style={{ position: 'absolute', top: '-10%', left: '-5%', width: '500px', height: '500px', background: 'rgba(217,164,65,0.15)', filter: 'blur(80px)', borderRadius: '50%', zIndex: 0 }}></div>
         <div style={{ position: 'absolute', bottom: '-20%', right: '-10%', width: '500px', height: '500px', background: 'rgba(255,255,255,0.05)', filter: 'blur(100px)', borderRadius: '50%', zIndex: 0 }}></div>
-        
+
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="section-header" style={{ marginBottom: 'var(--space-16)' }}>
             <span className="section-header__label" style={{ color: 'var(--gold-500)', background: 'rgba(217,164,65,0.15)', border: '1px solid rgba(217,164,65,0.2)' }}>Our Team</span>
@@ -141,7 +153,7 @@ export default function About() {
           </div>
           <div className="grid grid--3">
             {team.map(({ name, initials, image, role, bio }, idx) => (
-              <div key={name} className="team-card" style={{ 
+              <div key={name} className="team-card" style={{
                 border: idx === 1 ? '2px solid var(--gold-400)' : '1px solid rgba(255,255,255,0.8)',
                 boxShadow: idx === 1 ? '0 24px 48px rgba(0,0,0,0.3)' : '0 12px 32px rgba(0,0,0,0.15)',
                 position: 'relative',
@@ -167,7 +179,7 @@ export default function About() {
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                   </a>
                   <a href="https://www.linkedin.com/company/hey-investor-pvt-ltd-official/" style={{ width: '40px', height: '40px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--gray-200)', color: '#0A66C2', transition: 'all 0.2s', textDecoration: 'none', background: 'var(--white)' }} target="_blank" rel="noopener noreferrer">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg>
                   </a>
                 </div>
               </div>
@@ -185,7 +197,7 @@ export default function About() {
               <div style={{ position: 'absolute', top: 0, right: 0, width: '150px', height: '150px', background: 'var(--green-50)', borderRadius: '0 0 0 100%', zIndex: 0, transition: 'transform 0.4s ease', opacity: 0.7 }} className="hover-scale"></div>
               <div style={{ position: 'relative', zIndex: 1 }}>
                 <div style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '64px', height: '64px', borderRadius: '20px', background: 'var(--green-100)', color: 'var(--green-700)', marginBottom: 'var(--space-6)' }}>
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></svg>
                 </div>
                 <h3 style={{ fontSize: 'var(--text-3xl)', fontWeight: 800, color: 'var(--green-900)', marginBottom: 'var(--space-2)', letterSpacing: '-0.02em' }}>Our Mission</h3>
                 <h4 style={{ fontSize: 'var(--text-lg)', fontWeight: 700, color: 'var(--gold-500)', marginBottom: 'var(--space-5)', fontStyle: 'italic' }}>Empowering Dreams, Building Futures</h4>
@@ -203,7 +215,7 @@ export default function About() {
               <div style={{ position: 'absolute', top: 0, right: 0, width: '150px', height: '150px', background: 'var(--gold-50)', borderRadius: '0 0 0 100%', zIndex: 0, transition: 'transform 0.4s ease', opacity: 0.7 }} className="hover-scale"></div>
               <div style={{ position: 'relative', zIndex: 1 }}>
                 <div style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '64px', height: '64px', borderRadius: '20px', background: 'var(--gold-100)', color: 'var(--gold-600)', marginBottom: 'var(--space-6)' }}>
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg>
                 </div>
                 <h3 style={{ fontSize: 'var(--text-3xl)', fontWeight: 800, color: 'var(--green-900)', marginBottom: 'var(--space-2)', letterSpacing: '-0.02em' }}>Our Vision</h3>
                 <h4 style={{ fontSize: 'var(--text-lg)', fontWeight: 700, color: 'var(--gold-500)', marginBottom: 'var(--space-5)', fontStyle: 'italic' }}>Redesigning Skylines, Enriching Lives</h4>
@@ -226,27 +238,27 @@ export default function About() {
             <span className="section-header__label">Our Pillars</span>
             <h2 className="section-header__title">What Sets Us Apart</h2>
           </div>
-          
+
           <div className="grid grid--2">
             <div className="why-card">
               <div className="why-card__icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
               </div>
               <h4>NMRDA &amp; RL Approved</h4>
               <p>Every project carries a clear title and official sanction. You receive government-verified documentation at purchase — absolutely zero legal ambiguity.</p>
             </div>
-            
+
             <div className="why-card">
               <div className="why-card__icon" style={{ background: 'var(--gold-100)', color: 'var(--gold-600)' }}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="5" width="20" height="14" rx="2" ry="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="5" width="20" height="14" rx="2" ry="2" /><line x1="2" y1="10" x2="22" y2="10" /></svg>
               </div>
               <h4>90% Bank Loan Facility</h4>
               <p>Through our partner banks, eligible buyers can access up to 90% LTV financing. We handle your entire application process end-to-end.</p>
             </div>
-            
+
             <div className="why-card">
               <div className="why-card__icon" style={{ background: 'var(--blue-100)', color: 'var(--blue-500)' }}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" /></svg>
               </div>
               <h4>Prime Growth Corridors</h4>
               <p>We focus exclusively on high-appreciation zones like Wardha Road, Hingna, and Amravati Road, ensuring your investment grows rapidly.</p>

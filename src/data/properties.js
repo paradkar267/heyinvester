@@ -248,6 +248,32 @@ const properties = [
     ],
     image: '/PROPERTY/chaware.png',
   },
+  {
+    slug: 'earth-park-2',
+    name: 'Earth Park 2',
+    location: 'Hingna, Nagpur',
+    area: 'Hingna',
+    pricePerSqft: 2500,
+    plotSizes: [1000, 1500, 2000],
+    type: 'mixed',
+    status: 'available',
+    approvals: ['NMRDA', 'RL'],
+    loanEligible: 'Yes — up to 80% Bank Finance',
+    description: 'EARTH PARK 2 - Build Your Future, Today. Featuring 260 ft Road Touch Commercial Property (₹3200 / sq.ft) and 150 ft Road Touch Residential Property (₹2500 / sq.ft).',
+    additionalDetails: [
+      { label: 'Hingna Tahsil Office', value: '1 KM' },
+      { label: 'Hingna Square', value: '1.5 KM' },
+      { label: 'Metro Station', value: '1.2 KM' }
+    ],
+    features: [
+      '260 ft Road Touch Commercial Property',
+      '150 ft Road Touch Residential Property',
+      'With Full Development',
+      'NMRDA Sanctioned & RL Plots',
+      '80% Bank Finance'
+    ],
+    image: '/9.png',
+  }
 ];
 
 export default properties;
