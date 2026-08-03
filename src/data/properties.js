@@ -257,9 +257,9 @@ const properties = [
     plotSizes: [1000, 1500, 2000],
     type: 'mixed',
     status: 'available',
-    approvals: ['NMRDA', 'RL'],
+    approvals: ['NMRA', 'RL'],
     loanEligible: 'Yes — up to 80% Bank Finance',
-    description: 'EARTH PARK 2 - Build Your Future, Today. Featuring 260 ft Road Touch Commercial Property (₹3200 / sq.ft) and 150 ft Road Touch Residential Property (₹2500 / sq.ft).',
+    description: 'EARTH PARK 2 - Build Your Future, Today. Featuring 260 ft Road Touch Commercial Property (₹3000 / sq.ft) and 150 ft Road Touch Residential Property (₹2500 / sq.ft).',
     additionalDetails: [
       { label: 'Hingna Tahsil Office', value: '1 KM' },
       { label: 'Hingna Square', value: '1.5 KM' },
@@ -269,7 +269,7 @@ const properties = [
       '260 ft Road Touch Commercial Property',
       '150 ft Road Touch Residential Property',
       'With Full Development',
-      'NMRDA Sanctioned & RL Plots',
+      'NMRA Sanctioned & RL Plots',
       '80% Bank Finance'
     ],
     image: '/9.png',
