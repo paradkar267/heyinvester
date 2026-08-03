@@ -13,6 +13,7 @@ export default function Navbar() {
   const { pathname } = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [qrOpen, setQrOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -32,7 +33,14 @@ export default function Navbar() {
               <img src="/logo (1).png" alt="Hey Investor Logo" />
             </Link>
             <div className="nav__rera-info">
-              <img src="/qrcode.png" alt="MahaRERA QR Code" className="nav__qrcode" />
+              <img
+                src="/qrcode.png"
+                alt="MahaRERA QR Code"
+                className="nav__qrcode"
+                onClick={() => setQrOpen(true)}
+                style={{ cursor: 'pointer' }}
+                title="Click to enlarge for scanning"
+              />
               <div className="nav__rera-text">
                 <span className="nav__rera-label">MahaRERA Registration No.</span>
                 <span className="nav__rera-number">U70109MH2021PTC369834</span>
@@ -85,6 +93,21 @@ export default function Navbar() {
           Book a Site Visit
         </Link>
       </div>
+
+      {/* QR Code lightbox */}
+      {qrOpen && (
+        <div
+          className="qr-lightbox"
+          onClick={() => setQrOpen(false)}
+        >
+          <div className="qr-lightbox__card" onClick={e => e.stopPropagation()}>
+            <button className="qr-lightbox__close" onClick={() => setQrOpen(false)} aria-label="Close">×</button>
+            <img src="/qrcode.png" alt="MahaRERA QR Code" className="qr-lightbox__img" />
+            <p className="qr-lightbox__text">MahaRERA Registration No.</p>
+            <p className="qr-lightbox__number">U70109MH2021PTC369834</p>
+          </div>
+        </div>
+      )}
     </>
   );
 }
