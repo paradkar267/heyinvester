@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react';
 import BlogCard from '../components/BlogCard';
 import blogPosts from '../data/blogPosts';
 import useScrollReveal, { useStaggerReveal } from '../hooks/useScrollReveal';
+import SEO from '../components/SEO';
 
 // Reusing an image for the blog banner
 import bgImage from '/properties.png';
@@ -28,8 +29,12 @@ export default function Blog() {
 
   return (
     <>
+      <SEO 
+        title="Blog & Insights"
+        description="Latest updates, market trends, and real estate insights from Hey Investor."
+      />
       {/* ── Full-Width Blog Banner ────────────────────────────── */}
-      <div className="page-header page-header--properties animate-in" style={{ backgroundImage: 'url(/properties.png)' }}>
+      <div className="page-header page-header--blog animate-in" style={{ backgroundImage: 'url(/blogbg.png)' }}>
         <div className="container">
           <h1 className="page-header__title" style={{ fontSize: 'var(--text-4xl)' }}>Our Blog</h1>
         </div>

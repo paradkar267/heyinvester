@@ -3,6 +3,7 @@ import properties from '../data/properties';
 import BookingForm from '../components/BookingForm';
 import TrustBadges from '../components/TrustBadges';
 import useScrollReveal from '../hooks/useScrollReveal';
+import SEO from '../components/SEO';
 
 export default function PropertyDetail() {
   const { slug } = useParams();
@@ -16,6 +17,7 @@ export default function PropertyDetail() {
   if (!property) {
     return (
       <>
+        <SEO title="Property Not Found" description="The property you are looking for does not exist or has been removed." />
         <div className="page-header">
           <div className="container">
             <h1 className="page-header__title">Property Not Found</h1>
@@ -38,6 +40,12 @@ export default function PropertyDetail() {
 
   return (
     <>
+      <SEO 
+        title={`${name} in ${location}`}
+        description={description.substring(0, 150) + '...'}
+        image={image}
+        url={`https://heyinvestor.in/properties/${slug}`}
+      />
       <div className="page-header reveal" ref={headerRef}>
         <div className="container">
           <h1 className="page-header__title">{name}</h1>

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import BookingForm from '../components/BookingForm';
 import useScrollReveal, { useStaggerReveal } from '../hooks/useScrollReveal';
+import SEO from '../components/SEO';
 
 export default function Contact() {
   const headerRef = useScrollReveal();
@@ -10,6 +11,10 @@ export default function Contact() {
 
   return (
     <>
+      <SEO 
+        title="Contact Us"
+        description="Get in touch with Hey Investor. Schedule a site visit, ask about loan facilities, or speak to our real estate experts today."
+      />
       <div className="contact-hero animate-in">
         <div className="container">
           <div className="contact-hero__container">

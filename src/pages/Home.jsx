@@ -5,6 +5,7 @@ import TrustBadges from '../components/TrustBadges';
 import ImageSlider from '../components/ImageSlider';
 import properties from '../data/properties';
 import useScrollReveal, { useStaggerReveal } from '../hooks/useScrollReveal';
+import SEO from '../components/SEO';
 
 const availableProperties = properties.filter(p => p.status === 'available');
 const comingSoonProjects = properties.filter(p => p.status === 'coming-soon');
@@ -23,6 +24,10 @@ export default function Home() {
 
   return (
     <>
+      <SEO 
+        title="Home"
+        description="Build your legacy on land you can trust. Premium, NMRDA & RL approved residential plots in Nagpur's fastest-growing corridors."
+      />
       {/* ── Hero ────────────────────────────── */}
       <section className="hero">
         <div className="container">

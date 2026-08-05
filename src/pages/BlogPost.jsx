@@ -1,8 +1,8 @@
 import { useParams, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import blogPosts from '../data/blogPosts';
 import BlogCard from '../components/BlogCard';
 import useScrollReveal, { useStaggerReveal } from '../hooks/useScrollReveal';
+import SEO from '../components/SEO';
 import React from 'react';
 
 // Custom component to render the parsed markdown-like content
@@ -128,6 +128,7 @@ export default function BlogPost() {
   if (!post) {
     return (
       <>
+        <SEO title="Post Not Found" description="The blog post you are looking for does not exist or has been removed." />
         <div className="page-header">
           <div className="container">
             <h1 className="page-header__title">Post Not Found</h1>
@@ -164,10 +165,13 @@ export default function BlogPost() {
 
   return (
     <>
-      <Helmet>
-        <title>{title} | Hey Investor Blog</title>
-        <meta name="description" content={excerpt} />
-      </Helmet>
+      <SEO 
+        title={title}
+        description={excerpt}
+        image={coverImage}
+        type="article"
+        url={`https://heyinvestor.in/blog/${slug}`}
+      />
       
       {/* Custom Hero mimicking the screenshot */}
       <div className="reveal" style={{ paddingTop: '120px', paddingBottom: '40px', background: 'var(--white)', overflow: 'hidden' }} ref={headerRef}>

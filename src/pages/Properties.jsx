@@ -4,6 +4,7 @@ import PropertyCard from '../components/PropertyCard';
 import FilterBar, { applyFilters } from '../components/FilterBar';
 import propertiesData from '../data/properties';
 import useScrollReveal, { useStaggerReveal } from '../hooks/useScrollReveal';
+import SEO from '../components/SEO';
 
 // Import image directly to ensure Vite resolves it
 import bgImage from '/properties.png';
@@ -19,6 +20,10 @@ export default function Properties() {
 
   return (
     <>
+      <SEO 
+        title="Our Properties"
+        description="Explore our available and upcoming premium plots in Nagpur and Vidarbha. NMRDA & RL approved with 90% bank finance available."
+      />
       {/* ── Full-Width Properties Banner ────────────────────────────── */}
       <div className="page-header page-header--properties animate-in" style={{ backgroundImage: 'url(/properties.png)' }}>
         <div className="container">

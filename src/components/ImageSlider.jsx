@@ -13,14 +13,16 @@ const images = [
 
 export default function ImageSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const sliderRef = useScrollReveal();
 
   useEffect(() => {
+    if (isPaused) return;
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [isPaused]);
 
   const goToPrev = () => {
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
@@ -54,7 +56,15 @@ export default function ImageSlider() {
           </p>
         </div>
         
-        <div className="slider-wrapper reveal" ref={sliderRef}>
+        <div 
+          className="slider-wrapper reveal" 
+          ref={sliderRef}
+          onMouseDown={() => setIsPaused(true)}
+          onMouseUp={() => setIsPaused(false)}
+          onMouseLeave={() => setIsPaused(false)}
+          onTouchStart={() => setIsPaused(true)}
+          onTouchEnd={() => setIsPaused(false)}
+        >
           
           {/* Navigation Arrows (Outside) */}
           <button className="slider-arrow slider-arrow-left" onClick={goToPrev} aria-label="Previous image">

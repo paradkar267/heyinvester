@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import useScrollReveal, { useStaggerReveal } from '../hooks/useScrollReveal';
 import TrustBadges from '../components/TrustBadges';
+import SEO from '../components/SEO';
 
 const team = [
   { name: 'Gyaneshwar Singh', initials: 'GS', image: '/thakur.jpeg', role: 'Sales Head', bio: 'Specialises in land acquisition, regulatory approvals, and project planning.' },
@@ -17,6 +18,10 @@ export default function About() {
 
   return (
     <>
+      <SEO 
+        title="About Us"
+        description="Learn more about Hey Investor. We are dedicated to providing premium, trusted, and legally approved real estate solutions in Nagpur."
+      />
       <div className="page-header page-header--properties animate-in" style={{ backgroundImage: 'url(/properties.png)' }}>
         <div className="container">
           <h1 className="page-header__title" style={{ fontSize: 'var(--text-4xl)' }}>About Hey Investor</h1>
