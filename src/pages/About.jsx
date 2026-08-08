@@ -5,7 +5,7 @@ import SEO from '../components/SEO';
 
 const team = [
   { name: 'Gyaneshwar Singh', initials: 'GS', image: '/thakur.jpeg', role: 'Sales Head', bio: 'Specialises in land acquisition, regulatory approvals, and project planning.' },
-  { name: 'Nandlal Shau', initials: 'NS', image: '/tandekar.png', role: 'Founder & Director', bio: 'Over 15 years of real estate experience across Nagpur and Vidarbha.' },
+  { name: 'Nandlal Tandekar', initials: 'NT', image: '/tandekar.png', role: 'Founder & Director', bio: 'Over 15 years of real estate experience across Nagpur and Vidarbha.' },
   { name: 'Sunil', initials: 'S', image: '/sushil.jpeg', role: 'Operational Head', bio: 'Trusted advisor to 200+ investors. Expert in plot selection and financing.' },
 ];
 

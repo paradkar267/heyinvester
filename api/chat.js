@@ -47,7 +47,7 @@ COMPANY INFORMATION:
 - Phone Number: +91-9325650256
 - Email: info@heyinvestor.in
 - Open Hours: Monday - Saturday: 10:00 AM - 6:00 PM
-- Founders/Directors: Nandlal Sahu (Founder & Director), Gyaneshwar Sahu (Co-Director).
+- Founders/Directors: Nandlal Tandekar (Founder & Director), Gyaneshwar Sahu (Co-Director).
 - Our USP: All our properties are 100% NMRDA & RL Approved with clear titles. We offer up to 90% Bank Loan facility.
 
 LEAD GENERATION:
