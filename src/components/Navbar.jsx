@@ -43,7 +43,7 @@ export default function Navbar() {
               />
               <div className="nav__rera-text">
                 <span className="nav__rera-label">MahaRERA Registration No.</span>
-                <span className="nav__rera-number">U70109MH2021PTC369834</span>
+                <span className="nav__rera-number">A50500037507</span>
               </div>
             </div>
           </div>
@@ -104,7 +104,7 @@ export default function Navbar() {
             <button className="qr-lightbox__close" onClick={() => setQrOpen(false)} aria-label="Close">×</button>
             <img src="/qrcode.png" alt="MahaRERA QR Code" className="qr-lightbox__img" />
             <p className="qr-lightbox__text">MahaRERA Registration No.</p>
-            <p className="qr-lightbox__number">U70109MH2021PTC369834</p>
+            <p className="qr-lightbox__number">A50500037507</p>
           </div>
         </div>
       )}
