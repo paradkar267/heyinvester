@@ -14,7 +14,6 @@ import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 
 import FloatingWhatsApp from './components/FloatingWhatsApp';
-import ChatWidget from './components/ChatWidget';
 import { Toaster } from 'react-hot-toast';
 
 // Scroll to top on route change
@@ -33,7 +32,6 @@ function GlobalWidgets() {
   return (
     <>
       <FloatingWhatsApp />
-      <ChatWidget />
     </>
   );
 }
