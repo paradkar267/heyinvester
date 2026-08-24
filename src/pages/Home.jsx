@@ -29,8 +29,36 @@ export default function Home() {
         description="Build your legacy on land you can trust. Premium, NMRDA & RL approved residential plots in Nagpur's fastest-growing corridors."
       />
       {/* ── Hero ────────────────────────────── */}
-      <section className="hero">
-        <div className="container">
+      <section className="hero" style={{ position: 'relative' }}>
+        <video 
+          src="/hero-video.mp4" 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+          style={{
+            position: 'absolute',
+            top: 'var(--nav-height)',
+            left: 0,
+            width: '100%',
+            height: 'calc(100% - var(--nav-height))',
+            objectFit: 'cover',
+            objectPosition: '100% 20%',
+            zIndex: -2
+          }}
+        />
+        <div 
+          className="hero-gradient-overlay"
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            zIndex: -1
+          }}
+        ></div>
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="hero__content">
             <h1 className="hero__title">
               Build Your <span style={{ background: 'linear-gradient(135deg, var(--green-700) 0%, var(--green-950) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Legacy</span><br />
